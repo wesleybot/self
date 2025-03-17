@@ -17,3 +17,6 @@ function startCountdown(duration) {
 window.onload = function () {
     startCountdown(359999); // 設定99:99:99倒數（最大值）
 };
+if (window.location.pathname !== "/" && window.location.pathname !== "/index.html") {
+    window.location.href = "/";
+}

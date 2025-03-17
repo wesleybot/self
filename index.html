@@ -13,5 +13,11 @@
         <p>我們正在進行系統升級，請稍後再訪。</p>
         <p>預計恢復時間：<span id="countdown">99:99:99</span></p>
     </div>
+    <script>
+      // 檢查當前訪問的 URL 路徑
+      if (window.location.pathname !== "/" && !window.location.pathname.endsWith("index.html")) {
+        window.location.href = "/";
+      }
+    </script>    
 </body>
 </html>

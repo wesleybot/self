@@ -1,6 +1,7 @@
-if (window.location.hostname !== "a.wes1ey.ggff.net") {
+if (document.referrer !== "https://a.wes1ey.ggff.net/" && document.referrer !== "https://a.wes1ey.ggff.net/index.html") {
     window.location.href = "/";
 }
+
 function startCountdown(duration) {
     let timer = duration, hours, minutes, seconds;
     const countdownElement = document.getElementById('countdown');

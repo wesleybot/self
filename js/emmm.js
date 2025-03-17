@@ -1,3 +1,6 @@
+if (window.location.hostname !== "a.wes1ey.ggff.net") {
+    window.location.href = "/";
+}
 function startCountdown(duration) {
     let timer = duration, hours, minutes, seconds;
     const countdownElement = document.getElementById('countdown');
@@ -17,6 +20,3 @@ function startCountdown(duration) {
 window.onload = function () {
     startCountdown(359999); // 設定99:99:99倒數（最大值）
 };
-if (window.location.pathname !== "/" && window.location.pathname !== "/index.html") {
-    window.location.href = "/";
-}

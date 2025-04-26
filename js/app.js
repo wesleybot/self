@@ -1,7 +1,7 @@
 // js/app.js
 
 // --- 新增：允許登入的使用者名稱 ---
-const ALLOWED_USERS = ["Alice", "Bob"];
+const ALLOWED_USERS = ["蕙栩大大", "Bob"];
 
 // DOM 取用
 const loginScreen     = document.getElementById('login-screen');

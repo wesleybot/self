@@ -1,0 +1,274 @@
+[
+    {
+      "question": "1. 下列哪一個Python指令是非法的？",
+      "options": {
+        "A": "a -= b",
+        "B": "a, b = b, a",
+        "C": "a = b = c = d = 1",
+        "D": "a = (b = c + 2)"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "2. 針對Python變數管理，下列哪一項錯誤？",
+      "options": {
+        "A": "變數不須宣告資料型態",
+        "B": "變數不須事先宣告",
+        "C": "變數不須先建立和給值而直接使用",
+        "D": "變數可以使用del釋放資源"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "3. 下列哪一項不是Python合法的變數名稱？",
+      "options": {
+        "A": "self",
+        "B": "int64",
+        "C": "_name_",
+        "D": "64ML"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "4. 下列哪一項不是Python所支援的預設資料型態？",
+      "options": {
+        "A": "list",
+        "B": "map",
+        "C": "string",
+        "D": "char"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "5. 對於Python字串（string）的運用，下列哪一項錯誤？",
+      "options": {
+        "A": "字元可以視為是長度為1的字串",
+        "B": "可以使用單引號或雙引號建立字串",
+        "C": "預設可以使用 + 號串接兩個字串",
+        "D": "預設可以使用 - 號刪除字串內的子字串"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "6. 對於Python邏輯判斷表達式，下列哪一項為False？",
+      "options": {
+        "A": "6 > 0 > 0",
+        "B": "6!=0 or 3==3",
+        "C": "not (6!=6 and 5!=5)",
+        "D": "(6*=6) < (6**6)"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "7. 對於Python的指令敘述，下列哪一項錯誤？",
+      "options": {
+        "A": "max = x if x>y else y",
+        "B": "max = x ? x>y :y",
+        "C": "if (x>y): print(x)",
+        "D": "while x>y: print(x)"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "8. 對於Python語言，假設var的值是1，執行完指令var = 'Hello'[var]+'var'，var的結果為下列哪一個？",
+      "options": {
+        "A": "Hello",
+        "B": "li",
+        "C": "Hvar",
+        "D": "evar"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "9. 下列哪一項不是Python數值資料型態？",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "complex",
+        "D": "bag"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "10. 對於R語言的應用，下列哪一個領域比較不適合？",
+      "options": {
+        "A": "迴歸分析",
+        "B": "資料挖掘",
+        "C": "機率推論",
+        "D": "嵌入式系統"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "11. 下列哪一項不是R語言所支援的資料型態？",
+      "options": {
+        "A": "向量（Vector）",
+        "B": "串列（List）",
+        "C": "矩陣（Matrix）",
+        "D": "字典（Dictionary）"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "12. 在R語言中呼叫函式的方式，不包含下列哪一個？",
+      "options": {
+        "A": "透過使用參數的位置",
+        "B": "透過使用參數的名稱",
+        "C": "透過使用預設的參數",
+        "D": "透過使用參數的別名"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "13. 在R語言中要建立線性迴歸模型，以處理測量二元反應變數（Binary Response Variable）的機率，要使用下列哪一個函式？",
+      "options": {
+        "A": "glm()",
+        "B": "regression()",
+        "C": "liner()",
+        "D": "linerRegression()"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "14. 在R語言中，使用下列哪一個函式計算矩陣m的轉置矩陣？",
+      "options": {
+        "A": "t(m)",
+        "B": "solve(m)",
+        "C": "det(m)",
+        "D": "diag(m)"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "15. 使用下列哪一個函式在R語言中安裝一個新的package - svm？",
+      "options": {
+        "A": "install.packages(\"svm\")",
+        "B": "install(\"svm\")",
+        "C": "installing('svm')",
+        "D": "installed(svm)"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "16. 在R語言中，查詢安裝package的所有列表，是下列哪一個指令？",
+      "options": {
+        "A": "installed.packages()",
+        "B": "list.packages()",
+        "C": "listAll.packages()",
+        "D": "list.all.packages()"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "17. 在R語言中，向量（Vector）v是c(1, 2, 3, 4)，串列（List）x是list(5:8)，則v*x[[1]]的輸出是下列哪一項？",
+      "options": {
+        "A": "[1] 5 10 15 20",
+        "B": "[1] 5 6 7 8",
+        "C": "[1] 5 12 21 32",
+        "D": "產生錯誤"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "18. 在R語言中，向量（Vector）v是c(1, 2, 3, 4)，向量（Vector）x是c(5:8)，則v*x[1]的輸出是下列哪一項？",
+      "options": {
+        "A": "[1] 5 10 15 20",
+        "B": "[1] 6 12 18 24",
+        "C": "[1] 0 0 0 0",
+        "D": "[1] 5 6 7 8"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "19. 在TensorFlow指令中，tf.fill可產生一個全部為給定數值的數組，請問tf.fill([3,2],5)產生的值為下列哪一項？",
+      "options": {
+        "A": "[5,5,5,5,5,5]",
+        "B": "[[5,5],[5,5],[5,5]]",
+        "C": "[[5,5,5],[5,5,5]]",
+        "D": "[[5,5,5],[5,5]]"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "20. 在TensorFlow指令中，神經網路中訓練資料要先定義大小、型態，執行時使用feed_dict關鍵字作為賦予值的參數，請問feed_dict的型態為下列哪一項？",
+      "options": {
+        "A": "字典（Dictionary）",
+        "B": "串列（List）",
+        "C": "集合（Set）",
+        "D": "元組（Tuple）"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "21. 在TensorFlow指令中，tf.Variable的目的為保存及更新神經網路的參數，一般神經網路的權重初始值設為0~1的隨機值。若變數input、output分別為輸入層及輸出層的個數，請問下列哪一項的權重設定是正確的？",
+      "options": {
+        "A": "tf.Variable(tf.ones([input, output]))",
+        "B": "tf.Variable(tf.zeros([input, output]))",
+        "C": "tf.Variable(tf.random_normal([input, output]))",
+        "D": "tf.Variable(tf.random.uniform([input, output]))"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "22. 在TensorFlow指令中，reshape()的作用是將變數轉換成參數中指定的形式，請問tf.reshape([1,2,3,4,5,6,7,8,9,10], [2,5])的輸出結果為下列哪一項？",
+      "options": {
+        "A": "[2,5]",
+        "B": "[[1,3,4,6],[7,8,9,10]]",
+        "C": "[[1,2,3,4,5],[6,7,8,9,10]]",
+        "D": "[[2,4,6,8,10,12,14,16,18,20],[5,10,15,20,25,30,35,40,45,50]]"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "23. 在TensorFlow中，每個定義的變數都稱為一個張量（Tensor），張量中保存得到結果的計算過程，以及名字（name）、維度（shape）和類型（type）三個屬性。張量需使用會話（Session）來執行定義好的運算，下列會話的定義方式哪一項錯誤？",
+      "options": {
+        "A": "sess = tf.Session()",
+        "B": "with tf.Session() as sess:",
+        "C": "with tf.Session() as session:",
+        "D": "sess = tf.Run()"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "24. 在TensorFlow中，使用matmul()函式將神經網路的輸入與權重相乘。請問tf.matmul([[1,2,3],[3,2,1]],[[2,2],[1,3],[2,3]])的值為下列哪一項？",
+      "options": {
+        "A": "[[10] [15] [17]]",
+        "B": "[[10 17] [10 15]]",
+        "C": "[[10] [17] [10] [15]]",
+        "D": "[[17 10] [15 10]]"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "25. 在TensorFlow中，tf.reduce_mean()可計算張量的平均值，通常用來計算原始資料與預測資料間的損失度，請問tf.reduce_mean([[1,2,3], [5,6,7]])的值及tf.reduce_mean([[1,2,3], [5,6,7]], 0)的值分別為下列哪一項？",
+      "options": {
+        "A": "[3 4 5]、3",
+        "B": "[2 6]、2",
+        "C": "4、[2 6]",
+        "D": "4、[3 4 5]"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "26. 在TensorFlow中，tf.concat()可將連接兩個張量，第一個參數為連接的兩個張量，第二個參數若為0，表示從row開始連接，若為1表示從column開始連接。如附圖所示，程式中張量tensor的值為哪一項？",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgD1woV0brCOtfdhHOF7UtReluAZ_4VmXFCmbT90ZCWKLVLtD0gpuuGzF2HKghomxV-fN5EBJtuzjqC6akvJUCkG4Ha1Est8vLmvR8CfyLC5oZiVLC9dhl5gnMtAbh9fLCYB5Qc5DNjVRNY/s1600/AB06026.bmp",
+      "options": {
+        "A": "[[1 3 2 4] [5 7 6 8]]",
+        "B": "[[1 2 3 4] [5 6 7 8]]",
+        "C": "[[1 3] [5 7] [2 4] [6 8]]",
+        "D": "[[1 3] [2 4] [5 7] [6 8]]"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "27. 在TensorFlow中，tf.argmax()可找出張量在指定軸的最大值位置。如附圖所示，程式中張量tensor的值為下列哪一項？",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGhdUloxiRFLr-V1Ot60eLg8IT5a66MxT98_w_HtMs2ComKT2lQSjwkEjEf6w33N98rlCBjPDWK2kkKzbkatB69R0fARMrmgA9h-Szd_eOFkYlCD5Li9RZXHdS1c16IbYBe2iBCpHlv04E/s1600/AB06027.bmp",
+      "options": {
+        "A": "[0 0 0]",
+        "B": "[1 1 1]",
+        "C": "[2 0]",
+        "D": "[0 2]"
+      },
+      "answer": "B"
+    }
+]

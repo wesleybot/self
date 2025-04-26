@@ -1,0 +1,690 @@
+[
+    {
+      "question": "1. 關於圖靈測試（Turing Test）實驗設計的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "是現行常用於測試資訊系統是否具有人工智慧的方式",
+        "B": "實驗中需要有兩個自然人參與",
+        "C": "過程具有隨機性，所以兩次實驗的結果並不保證完全一樣",
+        "D": "因為設計上存在許多問題，所以實務上絕對不適合被當成正式人工智慧資訊系統競賽的依據"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "2. 關於狀態空間的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "依照問題描述（如旅行推銷員問題），狀態空間的搜尋目標，可以是狀態起點到達狀態終點間路徑的某種特性或成本，例如路徑加權後的最短長度",
+        "B": "依照問題描述（如8拼圖遊戲），狀態空間的搜尋目標，可以是具有某種特性或成本的特定狀態，例如遊戲終止條件的滿足（達到終局）",
+        "C": "狀態空間的搜尋方式，僅能用窮舉式（Exhaustive）搜尋，才能保證找到最佳解答",
+        "D": "深度優先（Depth First）能保證在搜尋狀態空間時找到最佳解"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "3. 關於狀態空間的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "蒐集關心事件所有可能發生的情況，並逐一表示成狀態空間內的狀態節點",
+        "B": "只在目前情況與後續可能發生情況的對應節點間，才會存在方向鏈結（Arc）進行串聯",
+        "C": "可存在唯一或多種起始情況，即為起始狀態（Starting State）",
+        "D": "只存在唯一的狀態終點，即為目標狀態（Goal State）"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "4. 關於狀態空間的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "所謂狀態空間內的搜尋方法，就是嘗試找到一條從起始狀態到達目標狀態的路徑",
+        "B": "遊戲狀態空間內的方向鏈結（Arc），是只會存在於串聯具有合法移動步驟的兩個對應狀態節點間",
+        "C": "廣度優先（Breadth First）能保證在搜尋狀態空間時找到最佳解",
+        "D": "所有現存的狀態空間的搜尋方法，諸如啟發式（Heuristic）搜尋，都能保證找到最佳解"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "5. 關於狀態空間中深度優先（Depth First）搜尋的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "深度優先搜尋的方式是由起點開始，若該層鄰近狀態尚未完全檢查前，就持續由左往右地進行，若該層鄰近狀態已全部檢查完，才會進入下一層檢查",
+        "B": "深度優先搜尋可搭配堆疊（Stack）來進行實作",
+        "C": "深度優先能保證在搜尋狀態空間內找到最佳解答",
+        "D": "深度優先是將狀態空間內所有的狀態節點逐一檢查過的窮舉式（Exhaustive）搜尋法"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "6. 關於狀態空間中廣度優先（Breadth First）搜尋的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "搜尋的方式是由起點開始，未碰到已走過的狀態，就持續往下一層前進，若碰到已走過的狀態，就往回一步，直到所有狀態都搜尋過為止，每個狀態也僅拜訪一次",
+        "B": "可搭配佇列（Queue）來進行實作",
+        "C": "能保證在搜尋狀態空間時找到最佳解答",
+        "D": "是將狀態空間內所有的狀態節點逐一檢查過的窮舉式搜尋（Exhaustive Search）"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "7. 關於狀態空間中進行深度優先（Depth First）及廣度優先（Breadth First）搜尋的描述，下列哪些正確？(複選)",
+      "options": {
+        "A": "廣度優先搜尋的方式是由起點開始，未碰到已走過的狀態，就持續往下一層前進，若碰到已走過的狀態，就往回一步，直到所有狀態都搜尋過為止",
+        "B": "深度優先搜尋的方式是由起點開始，若該層狀態尚未完全檢查前，就持續由左往右地進行，若該層鄰近狀態已全部檢查完，才進入下一層，如此一層一層往下檢查，直到所有狀態都搜尋過為止",
+        "C": "深度優先及廣度優先搜尋皆能保證找到最佳解答",
+        "D": "深度優先及廣度優先皆是將狀態空間內所有的狀態節點逐一檢查過的窮舉式搜尋（Exhaustive Search）"
+      },
+      "answer": "C D"
+    },
+    {
+      "question": "8. 如附圖所示，同一層狀態之拜訪順序為由左而右。在狀態空間中，從狀態A開始進行深度優先（Depth First）搜尋的結果應為下列哪一項？",
+      "image": "https://img5.uploadhouse.com/fileuploads/31949/319496751121ccb827d61416b8cb8aa233fd127e.jpg",
+      "options": {
+        "A": "ABDIEFGCH",
+        "B": "ABCDEFGHI",
+        "C": "ACBHGFEDI",
+        "D": "ABDIEFCGH"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "9. 如附圖所示，同一層狀態之拜訪順序為由左而右。在狀態空間中，從狀態A開始進行廣度優先（Breadth First）搜尋的結果應為下列哪一項？",
+      "image": "https://img5.uploadhouse.com/fileuploads/31949/319496751121ccb827d61416b8cb8aa233fd127e.jpg",
+      "options": {
+        "A": "ABCDEFGHI",
+        "B": "ABDIEFGCH",
+        "C": "ACBHGFEDI",
+        "D": "ACHGIBFED"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "10. 關於狀態空間中進行最佳優先（Best-First）搜尋的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "是在搜尋時優先考慮目前搜尋狀態中，具有最佳分數的分枝，再持續往下搜尋",
+        "B": "在搜尋過程中，一但碰到所有子狀態的分數都比目前狀態差（低）時，搜尋即告終止",
+        "C": "在搜尋過程中，會隨時紀錄其他未檢查到的子節點資訊",
+        "D": "一般會搭配優先佇列（Priority Queue）來進行實作"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "11. 關於狀態空間中進行爬山搜尋法（Hill Climbing）的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "是一種最佳優先（Best-First）的搜尋法",
+        "B": "在搜尋過程中，一但碰到所有子狀態的分數都比目前狀態差（低）時，搜尋即告終止",
+        "C": "容易陷入局部較佳解（Local Maxima）",
+        "D": "搜尋過程時，不會保留或記錄所選擇狀態之外的其他（兄弟）狀態節點的資訊"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "12. 關於爬山搜尋法（Hill Climbing）的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "是在狀態空間搜尋過程中，僅考慮目前搜尋狀態中具有最佳分數值的分枝，持續往下搜尋",
+        "B": "搜尋過程僅考慮目前搜尋狀態中具有最佳值者的分枝，無須保留或記錄其他（兄弟）狀態節點的資訊",
+        "C": "是一種保證一定可以搜尋到最佳解答的方法",
+        "D": "一般常搭配使用啟發式（Heuristic）函數來評估狀態的分數"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "13. 關於A*搜尋演算法（A Star Search Algorithm）的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "是一種狀態空間中的啟發式（Heuristic）搜尋法",
+        "B": "一般僅需要檢查部分狀態節點的非窮舉式搜尋（Non-Exhaustive Search）",
+        "C": "即使使用適當的啟發式函數（Heuristic Function），還是無法保證找到最佳解答",
+        "D": "適用於單人遊戲的人工智慧設計，例如8拼圖遊戲等"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "14. 關於A*搜尋演算法的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "是一種窮舉式的動態規劃法（Dynamic Programming）",
+        "B": "搜尋過程除了考慮目前搜尋狀態中具有最佳值者的分枝外，還會紀錄其他（兄弟）狀態節點的資訊",
+        "C": "不保證可以搜尋到最佳解答",
+        "D": "搜尋效率一般較廣度優先（Breadth First）搜尋為佳"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "15. 關於A*搜尋演算法（A Star Search Algorithm）所使用啟發式（Heuristic）函數的描述，下列哪些正確？(複選)",
+      "options": {
+        "A": "啟發式函數退化成數值永遠為0時，A*演算法也就退化成深度優先（Depth First）搜尋",
+        "B": "啟發式函數愈逼近從目前狀態到達終止狀態所需的真實代價時，搜尋所需要檢查的狀態會愈少（愈接近理想值）",
+        "C": "所使用的解題啟發式函數必須滿足不會高估從現況到目標狀態的代價，意即較真實代價為小或相等",
+        "D": "因為所使用的解題啟發式函數並非規則，故無法保證找到最佳解答"
+      },
+      "answer": "B C"
+    },
+    {
+      "question": "16. 關於A*搜尋演算法（A Star Search Algorithm）的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "為一種分數（成本）最佳優先搜尋法",
+        "B": "即使所使用的解題啟發式函數（Heuristic）並非規則，在適當條件下，仍可保證找到最佳解答",
+        "C": "搜尋分數需要包含從起始狀態到達目前狀態實際已支付的代價，加上從現況到目標狀態的預估代價",
+        "D": "所使用的解題啟發式函數（Heuristic）必須滿足不會低估從現況到目標狀態的真實代價，意即較真實代價為高，即可找到最佳解答"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "17. 關於A*搜尋演算法的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "適合用於解決單人遊戲的決策問題，如8拼圖遊戲",
+        "B": "發現滿足解題條件的訣竅並非只有一個時，由於訣竅間並無較好之比較優劣的方式，故隨機擇一使用即可",
+        "C": "常用於遊戲中非人類角色（NPC）移動路徑的計算",
+        "D": "在搜尋最短路徑的效能上，一般較使用窮舉式動態規劃法（Dynamic Programming）的Dijkstra演算法為佳"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "18. 關於最小最大（MinMax）搜尋的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "可用於雙人對戰類遊戲的設計",
+        "B": "若對手先下，分數計算時應先取Min再取Max",
+        "C": "一般會搭配使用解題訣竅（Heuristic），來適當控制所需搜尋的層數，而不一定要展開搜尋到遊戲結束",
+        "D": "又被稱為Alpha-Beta剪枝法（Prune），亦即兩者的運作方式完全相同"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "19. 關於述語邏輯（Predicate Logic）常用符號的描述，下列哪一項錯誤？",
+      "options": {
+        "A": { 
+          "text": "是指所有存在元素皆可滿足後續的邏輯描述", 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhek2vZGceusZIMcdbkL7AOmP0PbuCeWll6_AXYTTYQyyWsV2TNDy9_8NX4Jb3uJC3MWnA4PVbuaRpfiEuN6duY88yw6H6OCJZqndeo8E7Jj_DDTXNzGBcZ0qhY5ZWMvinIT5pXAvDY_3m-/s1600/AB10301.bmp"]
+          },
+        "B": { "text": "代表後續至少有一個邏輯描述要滿足，為「或」（Or）的意思", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwgvZ72jmG7mVWX8lYROv66maVEOXzT9aeJtEZjLZHphpK5AtGN8ztRraQJAb7FAMxWsbRtnGLraF7sTuEI4nEXuh5gNkG_LSp0768zIHxMiAxjzKnJnF6RL-9aTKGGWp78_9Hkdd0WP_5/s1600/AB10302.bmp"},
+        "C": { "text": "┑代表否定（Not）後續的邏輯描述"},
+        "D": { "text": "代表後續的邏輯描述皆要滿足，為「且」（And）的意思", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMEZiFEi7dONFjXYhsLGVqseNgIzhtai-LI4YWgEe0_5BVsIm5PdMtkaMseG7KdhG7Y097oSdAibgmpXS2e-W40YsMifZ6_HO2UG_g1Wz2dRkbf2eIgTHVssclbPZvfdvSAdgsa6HDywGg/s1600/AB10304.bmp"}
+      },
+      "answer": "A"
+    },
+    {
+      "question": "20. ┑代表否定（Not），則下列哪一項不符合一階述語邏輯（First-Order Predicate Logic）的定義？",
+      "options": {
+        "A": { 
+          "text": "X likes(X, kate)", 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhek2vZGceusZIMcdbkL7AOmP0PbuCeWll6_AXYTTYQyyWsV2TNDy9_8NX4Jb3uJC3MWnA4PVbuaRpfiEuN6duY88yw6H6OCJZqndeo8E7Jj_DDTXNzGBcZ0qhY5ZWMvinIT5pXAvDY_3m-/s1600/AB10301.bmp"]
+          },
+        "B": { "text": "X likes(X, kate)", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoGATpVFzeRuxpqUN3lx73mHDCIrqrQ_OZY51ahOCJoy5f9jH-TfkxyTrLK_hiREMRAutDSXzrcHBjvPGb_e6YS3QMvwhRiFRUUgIZz9Yb-bdKi4PrlpENp3gFokx61l7POiQLc_gzTxzw/s1600/AB10305.bmp"},
+        "C": { "text": " (Likes) Likes(george,kate)", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoGATpVFzeRuxpqUN3lx73mHDCIrqrQ_OZY51ahOCJoy5f9jH-TfkxyTrLK_hiREMRAutDSXzrcHBjvPGb_e6YS3QMvwhRiFRUUgIZz9Yb-bdKi4PrlpENp3gFokx61l7POiQLc_gzTxzw/s1600/AB10305.bmp" },
+        "D": { "text": "likes(george,kate) ⋀ likes(george,wine)"}
+      },
+      "answer": "C"
+    },
+    {
+      "question": "21. ┑代表否定（Not），下列哪些述語邏輯（Predicate Logic）的描述，與「沒有人喜歡繳稅」（Nobody likes taxes）具有相同的意思？(複選)",
+      "options": {
+        "A": { 
+          "text": "┑ƎX likes(X, taxes)"},
+        "B": { "text": "X┑ likes(X, taxes)", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoGATpVFzeRuxpqUN3lx73mHDCIrqrQ_OZY51ahOCJoy5f9jH-TfkxyTrLK_hiREMRAutDSXzrcHBjvPGb_e6YS3QMvwhRiFRUUgIZz9Yb-bdKi4PrlpENp3gFokx61l7POiQLc_gzTxzw/s1600/AB10305.bmp"},
+        "C": { "text": "X dislikes(X, taxes)", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoGATpVFzeRuxpqUN3lx73mHDCIrqrQ_OZY51ahOCJoy5f9jH-TfkxyTrLK_hiREMRAutDSXzrcHBjvPGb_e6YS3QMvwhRiFRUUgIZz9Yb-bdKi4PrlpENp3gFokx61l7POiQLc_gzTxzw/s1600/AB10305.bmp" },
+        "D": { "text": "X┑ likes(X, taxes)", "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNGOUQOn4z1ckxNueaqfwPj7rdGYgWRgVTG0nu-Mpu7G61bzEgi47m4SwLFfilDrxIFE5tYULpLNZIJgq_0f8TsPYf_REV1WjG_OohoxF7QW-xrfk1UO6TzvSInAojvKzXCC9A97Imwhwm/s1600/AB10301.bmp"}
+      },
+      "answer": "A B C"
+    },
+      {
+        "question": "22. Ɐ X mortal(X) ⇒ 「所有的人都會老」、human(Socrates)「蘇格拉底是個人」，根據述語邏輯（Predicate Logic）的描述及運算，下列敘述哪些正確？(複選)",
+        "options": {
+          "A": "可推得human(Socrates) ⇒ mortal(Socrates)",
+          "B": "可推得蘇格拉底會老mortal(Socrates)",
+          "C": "無法推得human(Socrates) ⇒ mortal(Socrates)",
+          "D": "無法推得蘇格拉底會老mortal(Socrates)"
+        },
+        "answer": "A B"
+      },
+      {
+        "question": "23. 關於述語邏輯（Predicate Logic）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "述語邏輯較一般命題（Proposition）式邏輯多了類似函數或關係的概念，所以表達能力較強",
+          "B": "一階述語邏輯（First-Order Predicate Logic）中的函數或關係不可為變數",
+          "C": "述語邏輯描述中，不可以使用到布林邏輯運算（AND/OR/NOT）",
+          "D": "述語邏輯描述中，可以使用到各項變數（Variable）來代表一般物件，如日期(X)"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "24. 在述語邏輯（Predicate Logic）中，將變數賦予適當值，以達到兩個邏輯敘述（句）完全等效（同樣意思）的目的，被稱為下列哪一種處理？",
+        "options": {
+          "A": "一致化（Unify）",
+          "B": "同步化（Synchronize）",
+          "C": "特殊化（Specialize）",
+          "D": "程序化（Procedurize）"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "25. 如附圖所示，已知事實為日期('八月十五日')，且本段通行速度(楊梅,95)和本段通行速度(泰山,65)，請根據附圖規則事實進行推論，下列敘述哪些正確？(複選)",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZsX9SjQrHrahkmLN_0n5kny1Inrj2xvtjkGTOmrQWA6gCUmH6fYfjq-F72YnhpuecVHnXjuHYEqIqjkFMmLLlfmK_yUz85pibBarK39UQ_VDoGmuu9S-Udqw7sUYvwz_PEm6SYt3yqyUV/s1600/AB03025.bmp",
+        "options": {
+          "A": "楊梅最大瞬間欲通行量為14500",
+          "B": "泰山交通阻塞嚴重",
+          "C": "楊梅交通阻塞嚴重",
+          "D": "八月十五日不需要收費"
+        },
+        "answer": "A B D"
+      },
+      {
+        "question": "26. 如附圖所示，已知事實為日期('一月一日')，且本段通行速度(楊梅,100)和本段通行速度(泰山,85)，請根據附圖規則事實進行推論，下列哪一項錯誤？",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSh5Bn0sEYqkMLT8bw3YBBb0uq6rsFoEvtMizn7kukXq6zLWJYawLnHHe70Dol9PogbnuueK0xW3ZoO7mTtUb_MsGhvloOsn7KmkibGBRIa5m0SIQLaH6A2Hzr6WQO2ohHgrtMOlAzmX9v/s1600/AB03026.bmp",
+        "options": {
+          "A": "泰山最大瞬間欲通行量為15500",
+          "B": "泰山交通阻塞不嚴重",
+          "C": "楊梅交通阻塞不嚴重",
+          "D": "一月一日不需要收費"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "27. 關於專家系統的敘述，下列哪一項正確？",
+        "options": {
+          "A": "是需要專家才懂得如何操作的資訊系統",
+          "B": "是需要資訊科技的專家，才懂得如何建置的資訊系統",
+          "C": "是需要專家的知識，才能建置和運作的資訊系統",
+          "D": "是需要專家才能理解其解釋內容的資訊系統"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "28. 關於專家系統的敘述，下列哪一項錯誤？",
+        "options": {
+          "A": "內部專家知識是不可修改的",
+          "B": "侷限於解決特定領域的問題",
+          "C": "一般可透過自然語言等多種人機介面來操作互動",
+          "D": "屬於人工智慧的應用領域"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "29. 特定科別醫生看病時，可能會使用下列哪一種人工智慧系統，來協助看病診斷及開立處方箋？",
+        "options": {
+          "A": "常識推理模型",
+          "B": "電腦防毒系統",
+          "C": "專家系統",
+          "D": "聊天機器人"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "30. 下列哪一項不算是專家系統的應用？",
+        "options": {
+          "A": "分析地質資料的多種礦產開發系統Dipmeter",
+          "B": "決定複雜有機化合物的分子結構系統DENDRAL",
+          "C": "能解答顧客各種疑問的智慧型語音客服系統",
+          "D": "市面上能以語音來引導顧客操作的自動提款機（ATM）"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "31. 下列哪一項不是專家系統一定需包含的部分？",
+        "options": {
+          "A": "解釋子系統",
+          "B": "使用者交談介面",
+          "C": "專家規則知識庫",
+          "D": "程式整合開發環境（IDE）"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "32. 專家系統一般具備下列哪些解釋能力？(複選)",
+        "options": {
+          "A": "如何（How）獲得目前推論成果",
+          "B": "能解釋系統為何（Why）這樣答覆使用者的原因或理由",
+          "C": "預計何時（When）可推得結果",
+          "D": "適合進行推論的地點是哪裡（Where）"
+        },
+        "answer": "A B"
+      },
+      {
+        "question": "33. 在考量是否適合發展專家系統來解決問題時，下列哪一項描述錯誤？",
+        "options": {
+          "A": "問題需要採用符號邏輯的方式來進行推論",
+          "B": "解決常識性的觀念或問題",
+          "C": "問題本身不宜太過複雜，包含範圍也不能過大",
+          "D": "適合處理一般計算式演算法無法順利解決的問題"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "34. 關於專家系統知識庫的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "包含專家知識（大都以一般規則形式表達）",
+          "B": "包含已知符合現況的特定事實",
+          "C": "透過特定的知識庫編輯介面來進行新增修改",
+          "D": "為配合專家系統發展於初始化時已設定完整的部份，無需也較不適合再任意進行變動"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "35. 專家系統一定需包含的部份為下列哪些？(複選)",
+        "options": {
+          "A": "推論子系統",
+          "B": "知識一致性檢核模組",
+          "C": "推論過程或結果之解釋子系統",
+          "D": "專家規則知識庫"
+        },
+        "answer": "A C D"
+      },
+      {
+        "question": "36. 關於專家系統內部的專家知識，下列哪一項錯誤？",
+        "options": {
+          "A": "一般會以規則（Rule）的形式呈現，例如IF...THEN",
+          "B": "規則間可能具有階層關係，即某條規則的結論，亦可做為其他規則的前題",
+          "C": "由於規則的觸發（前題滿足）一般是從第一條規則依序往後進行檢查，滿足目標後即宣告停止，所以規則排列的順序可能會影響到推論結果",
+          "D": "專家規則彼此間不可以發生任何矛盾牴觸，否則專家系統將無法順利運作"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "37. 關於產生式規則系統（Production System）的組成要素，不包含下列哪一項？",
+        "options": {
+          "A": "一堆的產生式規則",
+          "B": "工作記憶區（Working Memory）",
+          "C": "辨識和運作循環（Recognize-Act Cycle）",
+          "D": "推論解釋子模組"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "38. 產生式規則系統（Production System）中，關於規則間「衝突解決」（Conflict Resolution）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "是屬於辨識和運作循環（Recognize-Act Cycle）的範疇",
+          "B": "是指在多條前題被滿足的產生式規則間，合理地選擇其中一條規則來運作",
+          "C": "常見的一種「衝突解決」的方式就是只執行第一條被觸發的規則",
+          "D": "必須由專家來負責將「衝突解決」的規則進行人工清理，才是唯一處理此類問題的正確方法"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "39. 專家系統可依照其專家知識和推理形式區分為規則導向（Rule-based）、模型導向（Model-based）和案例導向（Case-based），相關描述下列哪一項錯誤？",
+        "options": {
+          "A": "規則導向專家系統的缺點之一，就是大部分表達出來的專家規則其實都是偏向經驗法則，缺乏完整的理論功能和架構模型描述，容易碰到規則沒有描述到的狀況，進而導致系統無法順利運作",
+          "B": "模型導向專家系統尚需包含功能及理論架構上的相關知識，所以知識完整性上的需求是三者中最高的",
+          "C": "案例導向專家系統的優點之一，是可以直接採用歷史案例來套用，所以可以大幅縮短規則的推論過程",
+          "D": "三者優缺點特性明顯，故從理論基礎上就無法相容並存"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "40. 關於專家系統內部推論機制的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "可以是一種事實資料導向（Data-Driven）的推論方式",
+          "B": "一般多由第一條規則開始依序往後進行觸發（前題滿足）的檢查",
+          "C": "所有規則的觸發（前題滿足）與否，一般是進行單次的規則循序檢查即可達成",
+          "D": "一般搭配工作記憶區（Working Memory）的使用，用以紀錄目前已滿足的事實及正在檢查的相關規則"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "41. 關於邏輯推論機制的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "由已知事實往目標結論進行推論的方式，稱為前向推論（Forward Reasoning）",
+          "B": "由想要達到的目標結論，去檢查規則前題所需的事實是否滿足的推論方式，稱為後向推論（Backward Reasoning）",
+          "C": "選擇使用前向或後向推論，應該是依照問題本身的特性，挑選可能產生較少推論分支的方式來進行",
+          "D": "由於後向推論是從答案端回推，可能會比較有效率，故固定作為專家系統推論的方式"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "42. 假設某甲家族每代都會生育3個孩子，某甲想在家譜（樹）中確認自己10代前的祖先是否為某位歷史名人時，下列描述哪一項正確？",
+        "options": {
+          "A": "應該從歷史名人開始，依循前向推論（Forward Reasoning）方式來找尋某甲，效果會較佳",
+          "B": "應該從某甲開始，依循後向推論（Backward Reasoning）方式來尋找歷史名人，效果會較佳",
+          "C": "從歷史名人或某甲開始搜尋皆可，因為兩種方式搜尋效率完全相同",
+          "D": "從歷史名人或某甲開始搜尋皆可，因為搜尋過程隨機，無法事先預估好壞"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "43. 一般專家系統運作時，並沒有預設答案，故較常是從事實端來推論結果，這種推論方式被稱為下列哪一種？",
+        "options": {
+          "A": "前向推論（Forward Reasoning）",
+          "B": "後向推論（Backward Reasoning）",
+          "C": "雙向推論（Bi-directional Reasoning）",
+          "D": "證據推理（Evidential Reasoning）"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "44. 關於邏輯推論機制的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "不管是採用前向推論（Forward Reasoning）或是後向推論（Backward Reasoning），過程中所需搜尋的狀態個數一定相同",
+          "B": "分析地質資料的多種礦產開發系統Dipmeter適合採用前向推論（Forward Reasoning）",
+          "C": "醫學診斷上，醫師要求採取必要檢測是屬於後向推論（Backward Reasoning）",
+          "D": "決定複雜有機化合物的分子結構系統DENDRAL適合採用前向推論（Forward Reasoning）"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "45. 關於前向推論（Forward Reasoning）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "又可稱為資料驅動（Data Driven）的推論方式",
+          "B": "（幾乎）所有的事實資料都必需在初始階段就已完整提供",
+          "C": "適用在難以形成目標或假設的專家系統",
+          "D": "只有深度優先（Depth First）搜尋適合來進行前向推論，廣度優先（Breadth First）搜尋就比較不適合"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "46. 關於後向推論（Backward Reasoning）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "又可稱為目標驅動（Goal Driven）的推論方式",
+          "B": "適用在難以形成目標或假設的問題推論",
+          "C": "適用於具有大量的規則，符合初始階段就已被提供的已知事實",
+          "D": "深度優先（Depth First）和廣度優先（Breadth First）搜尋皆適合用來進行後向推論"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "47. 關於基本的模糊邏輯（Fuzzy Logic）描述，下列哪一項錯誤？",
+        "options": {
+          "A": "需先制定隸屬度函數和模糊規則後，方能運作",
+          "B": "是一種機器學習的技術",
+          "C": "常用於自動控制方面",
+          "D": "雛型系統容易建立並進行改良"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "48. 關於模糊邏輯（Fuzzy Logic）隸屬度（Membership）函數的來源為下列哪些？(複選)",
+        "options": {
+          "A": "可將基本定義少數的隸屬度函數，再利用擴展（Dilation）及集中（Concentration）來運算出新的隸屬度函數",
+          "B": "問卷調查多位使用者或專家的意見，再平均計算",
+          "C": "由單一使用者或專家制定",
+          "D": "利用機器學習的技術獲得"
+        },
+        "answer": "A B C D"
+      },
+      {
+        "question": "49. 關於模糊邏輯（Fuzzy Logic）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "和傳統集合論的差別，在於賦予每個元素一個不限於0或1的隸屬程度值",
+          "B": "可將隸屬度（Membership）函數區分為離散型和連續型",
+          "C": "梯形（Trapezoidal）函數是一種常見的隸屬度函數",
+          "D": "三角形（Triangular）函數過於簡化，並不適合作為隸屬度函數"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "50. 關於模糊邏輯（Fuzzy Logic）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "T-norm運算子適合用在模糊集合間，進行交集運算",
+          "B": "Min（取較小值）是一種常見的T-norm運算子",
+          "C": "*（取乘積）是一種常見的T-norm運算子",
+          "D": "T-norm及S-norm運算子分別適用在模糊規則前題條件進行邏輯「且」（AND）和「或」（OR）"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "51. 下列哪一種應用在實作時的主要技術，不是採用模糊邏輯？",
+        "options": {
+          "A": "一鍵控制（One-Touch）的洗衣機",
+          "B": "達到自動平衡控制的一維反向桿（Inverted Pendulum）車子問題",
+          "C": "Google公司打敗西洋棋王的AlphaGo",
+          "D": "控制器上只標明使用者感覺冷或熱的空調系統"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "52. 關於模糊系統（Fuzzy System）解模糊化（Defuzzification）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "對於模糊規則結論採用多項式表達的Sugeno模式，計算過程無需採用任何解模糊化的技術",
+          "B": "對於模糊規則結論採用單調模糊函數表達的Tsukamoto模式，計算過程幾乎無需或僅需採用最簡單的解模糊化技術",
+          "C": "對於模糊規則結論採用一般模糊函數表達的Mamdani模式，計算過程可能需要採用複雜的解模糊化技術，如面積中心法（Centroid of Area）或面積二分法（Bisector of Area）",
+          "D": "解模糊化的目的是將每條模糊規則的輸出分別轉換成明確數值後，以利後續的加總"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "53. 關於模糊系統（Fuzzy System）與一般規則系統（Rule Based System）的比較，下列哪一項錯誤？",
+        "options": {
+          "A": "模糊系統是所有規則都會被觸發，而一般規則系統只有單一條規則會被觸發",
+          "B": "模糊系統的規則輸出需經過整合（Aggregation），一般規則系統則不需要",
+          "C": "部份模糊系統的規則輸出需要額外解模糊化（Defuzzification），一般規則系統則不需要解模糊化",
+          "D": "模糊和一般規則系統的輸出訊號，分別是模糊和明確（Crisp）的數值，極易區分"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "54. 關於模糊系統（Fuzzy System）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "Mamdani模型的輸出，一定需要先經過解模糊化（Defuzzification）的步驟",
+          "B": "Sugeno模型的輸出，必是表達成輸入訊號間的多項式組合函數",
+          "C": "Tsukamoto模型輸出的隸屬度（Membership）函數，必為單調函數（可以是遞增或遞減）",
+          "D": "所有模糊模型的輸入訊號，一定是明確（Crisp）的數值"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "55.",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOncYb3ULssfPRKInnLz0eweU68Jcl_-szFCZX4KZ_iMQijzAhziH4reuw56RnRSbBuDhvGA6AnpMDyKf1qFlLuemaJZnuQJx693KuELfY6zLGLKwuYclv4poPt_VgeIvLhdo9JLot2dIN/s1600/AB03055.bmp",
+        "options": {
+          "A": "可作為一個關於空調模糊系統（Fuzzy System）的控制規則",
+          "B": "尚需要定義3個隸屬度（Membership）函數，方能順利運作",
+          "C": "無需領域專家提供完整明確的相關物理計算公式，即可順利運作",
+          "D": "尚需要選定模糊推論（Inference）模型及解模糊化（Defuzzification）的方法，方可順利運作"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "56. 如附圖所示，已知當車速speed為2單位時，低（low）、中等（medium）、高（high）隸屬度（Membership）函數值分別為μ low(2)=0.3，μ medium(2)=0.8，μ high(2)=0.1，則阻力resistance值約為下列哪一個數值？",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg94trjFOHM-0aYcuxWlEkAHCx3IJ_6Qpm7i9KydZ347GG_fEIOa3DWXCreu8XlOEbBicdKRPKw7zLucgvUeVsMoThdAgqc5PRg8oyE9uGTHmZbdDG9DgPNCrPICAxGLDjTr7ydCa0po2dM/s1600/AB03056.bmp",
+        "options": {
+          "A": "26",
+          "B": "8.6",
+          "C": "7.17",
+          "D": "3.83"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "57. 如附圖所示，關於設計模糊系統（Fuzzy System）隸屬函數的正確步驟，應為下列哪一種先後順序的組合？",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaVSsXVZ3TpJP8ZoWkA9hQtjWyaUWwG2BpkvY6xIZP3EfZWq3nKBFPqS2AymsYvRxK0fvF-tgqyBPJCptOhn-2VlcGh0E7_Up7NnlnOP_1VCSxnWRXrihN_yN4o2BS_SdMljKTzqo25vLJ/s1600/AB03057.bmp",
+        "options": {
+          "A": "丁乙甲丙",
+          "B": "乙丁甲丙",
+          "C": "丙甲乙丁",
+          "D": "丙甲丁乙"
+        },
+        "answer": "B"
+      },
+      {
+        "question": "58. 關於設計模糊系統（Fuzzy System）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "一般建議每個語意變數搭配使用3或5或7個語意值，亦即隸屬度（Membership）函數",
+          "B": "在解模糊化時，定性問題適合用最大平均法（Largest of Maximun），而定量問題則適合用求面積中心法（Centroid of Area）",
+          "C": "模糊規則表示時適合用DNF（Disjunctive Normal Form），亦即模糊規則前題條件間要用邏輯「或」（OR）串聯",
+          "D": "無需完整明確的物理運動公式，即可順利運作"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "59. 關於框架（Frame）知識表達方式的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "呈現出類似物件導向（Object-Oriented）的特性",
+          "B": "每個概念都會被表示成具有多個屬性槽（slot）和對應值的結構",
+          "C": "兩個概念間的有向鏈結（Arc）關係，僅能代表的是概念包含關係（依照箭頭方向，概念由大到小）",
+          "D": "可將人類知識以階層方式呈現"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "60. 關於標準框架（Frame）的組成內容描述，下列哪一項錯誤？",
+        "options": {
+          "A": "可以設定框架概念名稱",
+          "B": "可允許有關框架必要條件（Requirement）的描述",
+          "C": "每個屬性欄位名稱及其值都應事先定義清楚",
+          "D": "可允許一段具有處理功能的程序附加（Procedural Attachment）"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "61. Ɐ X human(X) ⇒ mortal(X)「所有的人類=>會老」，這是下列哪一種知識的表達方式？",
+        "options": {
+          "A": "規則（Rule）",
+          "B": "語意網路（Semantic Network）",
+          "C": "框架（Frame）",
+          "D": "黑板（Blackboard）模型"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "62. 如附圖所示，這是屬於哪一種知識的表達方式？",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSwP2Nkyw1ap9_kVKp5hZOkgW4vsryVHReWKHbDW3WFU6KybqMfGR1traAXcxTLZ_L0zqsJEPy-7cr9HhevmBukW1W13XWnsdoV4p1WV87WMlahzHATGywt-cnEnIhcPiJgu-uN-LbqwjT/s1600/AB03062.bmp",
+        "options": {
+          "A": "框架（Frame）",
+          "B": "語意網路（Semantic Network）",
+          "C": "知識地圖（Knowledge Map）",
+          "D": "黑板（Blackboard）模型"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "63. 如附圖所示，關於知識的描述，下列哪一項錯誤？",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh07s2hg2Y-j6Jwe5dYzWc8R-52MjtOgqjfHaC3LsJY2DriYuphIidsjBmdqUXKFbAdWldM9sJC8NpHVRmmlAhZ6SE7BllxpHpkSxMpW17NnXTasm2eAxIMtpMddND_8AKvHS-Hd1dQnE8T/s1600/AB03063.bmp",
+        "options": {
+          "A": "這是一種框架（Frame）表示",
+          "B": "「名稱」、「隸屬分類」、「用途」稱為屬性槽（slot）",
+          "C": "「辦公桌」、「電話分機」同時作為「名稱」及屬性值是一種違反此類知識表示法的錯誤寫法",
+          "D": "是一種階層式的知識表示法"
+        },
+        "answer": "C"
+      },
+      {
+        "question": "64. 如附圖所示，這是屬於哪一種知識的表達方式？",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil4b9YmqjLJFX47Nd3zyA5sW2L9m7v4FhOiOxuit_eNVwEDm3RDDozFP94NVE2-8AMfR6udiitZFZnjVKO5tYs05CsGr3RfltySdtc9nL9YfWQcyW6x5dKC6BI3IVw_-8mxxbPtoTa1Y_q/s1600/AB03064.bmp",
+        "options": {
+          "A": "語意網路（Semantic Network）",
+          "B": "知識地圖（Knowledge Map）",
+          "C": "概念分類圖（Concept Classification Map）",
+          "D": "知識連接圖（Knowledge Connector）"
+        },
+        "answer": "A"
+      },
+      {
+        "question": "65. 關於語意網路（Semantic Network）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "是一種知識的表達方式，用來表達一堆概念彼此間的語意關係，如繼承、隸屬等等",
+          "B": "現在最常被用於有關自然語言處理領域，如作為字典的知識表達方式",
+          "C": "所描述的概念常會被組織成分類階層（Taxonomic Hierarchy）",
+          "D": "標準的語意網路常以語意三元組（Semantic Triples）來表示，即主詞+關係+受詞，所以表達能力和一階的述語邏輯（Predicate Logic）是類似的"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "66. 關於語意網路（Semantic Network）的描述，下列哪一項錯誤？",
+        "options": {
+          "A": "WordNet因為描述了字間的關係，如同義、相反、部分等，算是一個知名的語意網路的應用範例",
+          "B": "標準的語意網路常以語意三元組（Semantic Triples）來表示，即主詞+關係+受詞，例如「小王認識小明」",
+          "C": "是一種知識的表達方式，用來表達一堆概念間的語意關係",
+          "D": "表達概念間的語意關係時，一定具有方向性，所以必定是有向圖形（Directed Graph）"
+        },
+        "answer": "D"
+      },
+      {
+        "question": "67. 如附圖所示，下列哪些描述合乎附圖中知識表示所呈現出來的意義？(複選)",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5-C1uNhHLtkV13A0xrsbIpJC0hh2wG-Q5v1EvZz62Shl58G_YAoygK6NqfGjMNansXDt7Dh0ABbugwQ-0AikcUHjsGXg9TeJaAs6gHW7xpqTKM-UU7sKmbLACVfiTuyyfo-0WhgbciFaG/s1600/AB03067.bmp",
+        "options": {
+          "A": "夜鶯會飛翔",
+          "B": "企鵝擁有翅膀",
+          "C": "企鵝不會飛翔",
+          "D": "夜鶯是肥胖的"
+        },
+        "answer": "A B C"
+      }
+]

@@ -1,0 +1,362 @@
+[
+    {
+    "question": "由於智慧一詞難以被定義，因此科學家在1950年代提出了一種測試機器是否有智慧的方式：若機器所表現的行為能不被辨識出其身分，則稱這台機器具有智慧。此測試的名稱為下列哪一項？",
+    "options": {
+        "A": "圖靈（Turing）測試",
+        "B": "尤拉（Euler）測試",
+        "C": "高斯（Gauss）測試",
+        "D": "范紐曼（Von Neumann）測試"
+    },
+    "answer": "A"
+    },
+    {
+    "question": "在1980年代，名為專家系統的人工智慧程序開始被許多公司所採用。請問專家系統的主要概念為下列哪一項？",
+    "options": {
+        "A": "模仿專家對特定的問題進行學習的系統，主要元件為機器學習模組",
+        "B": "針對特定領域的問題進行回答，主要元件為知識庫與推理機",
+        "C": "能夠比專家表現更好的人工智慧，主要元件為機器學習模組與推理機",
+        "D": "針對廣泛領域的問題進行回答的人工智慧，主要元件為知識庫與機器學習模組"
+    },
+    "answer": "B"
+    },
+    {
+    "question": "電腦科學家對人工智慧的智慧等級進行了數個分類。其中，若人工智慧能夠達到模仿人類解決特定問題的功能，則此人工智慧屬於下列哪一項？",
+    "options": {
+        "A": "強人工智慧",
+        "B": "弱人工智慧",
+        "C": "混合式人工智慧",
+        "D": "仿生式人工智慧"
+    },
+    "answer": "B"
+    },
+    {
+    "question": "造成現今人工智慧蓬勃發展的原因是由於支援人工智慧所需要的技術以及產業鏈逐漸完整。目前人工智慧中發展最蓬勃的一支為機器學習。由於機器學習需要大量的訓練資料來訓練其模型，因此收集資料是一件非常重要的事情。下列哪一項是可以讓我們方便收集大量資料的技術？",
+    "options": {
+        "A": "支援複雜運算的硬體",
+        "B": "雲端服務的普及",
+        "C": "大數據系統以及技術",
+        "D": "人工智慧理論的突破"
+    },
+    "answer": "B"
+    },
+    {
+    "question": "造成現今人工智慧蓬勃發展的原因是由於支援人工智慧所需要的技術以及產業鏈逐漸完整。下列哪一項是可以讓我們能夠快速地處理大量資料？",
+    "options": {
+        "A": "支援影像處理運算的硬體",
+        "B": "雲端服務的普及",
+        "C": "大數據系統以及技術",
+        "D": "人工智慧理論的突破"
+    },
+    "answer": "C"
+    },
+    {
+    "question": "現代所稱的人工智慧其實是由許多計算技術所組成的統稱。下列哪一項不屬於人工智慧領域中知名的計算技術的一環？",
+    "options": {
+        "A": "機器學習（Machine Learning）",
+        "B": "演化計算（Evolutionary Computation）",
+        "C": "資料探勘（Data Mining）",
+        "D": "雲端運算（Cloud Computing）"
+    },
+    "answer": "D"
+    },
+    {
+    "question": "目前人工智慧中發展最蓬勃的一支為機器學習，其中以類神經網路為基礎的深度學習廣泛應用。下列哪一項技術使得深度學習得以快速發展？",
+    "options": {
+        "A": "支援影像處理運算的硬體",
+        "B": "雲端服務的普及",
+        "C": "大數據系統以及技術",
+        "D": "人工智慧理論的突破"
+    },
+    "answer": "A"
+    },
+    {
+    "question": "在人工智慧的發展上，若以1986年倒傳遞學習演算法被重新發明作為分水嶺，則人工智慧學者後期主要的方法與思路為下列哪一項？",
+    "options": {
+        "A": "基於規則的方法",
+        "B": "基於統計的方法",
+        "C": "基於資料結構的方法",
+        "D": "基於經驗法則的方法"
+    },
+    "answer": "B"
+    },
+    {
+    "question": "1970年代初期，人工智慧首次遇到瓶頸。以下哪一項不屬於當時主要問題？",
+    "options": {
+        "A": "基礎理論的不完備",
+        "B": "許多問題的計算複雜度成指數成長",
+        "C": "許多倫理道德問題讓大家懼怕人工智慧",
+        "D": "硬體計算能力不夠強"
+    },
+    "answer": "C"
+    },
+    {
+    "question": "若人工智慧能達到與人同樣推理、思考、解決問題的能力，則屬於下列哪一項？",
+    "options": {
+        "A": "強人工智慧",
+        "B": "弱人工智慧",
+        "C": "混合式人工智慧",
+        "D": "仿生式人工智慧"
+    },
+    "answer": "A"
+    },
+    {
+    "question": "Google的線上文件協作服務屬於下列哪一種雲端服務？",
+    "options": {
+        "A": "IaaS",
+        "B": "SaaS",
+        "C": "PaaS",
+        "D": "IaaS、SaaS、PaaS皆有"
+    },
+    "answer": "B"
+    },
+    {
+    "question": "Amazon EC2所提供的雲端服務屬於下列哪一類？",
+    "options": {
+        "A": "IaaS",
+        "B": "SaaS",
+        "C": "PaaS",
+        "D": "IaaS、SaaS、PaaS皆有"
+    },
+    "answer": "A"
+    },
+    {
+    "question": "Google Cloud Platform的App Engine屬於哪一種雲端服務？",
+    "options": {
+        "A": "IaaS",
+        "B": "SaaS",
+        "C": "PaaS",
+        "D": "IaaS、SaaS、PaaS皆有"
+    },
+    "answer": "C"
+    },
+    {
+    "question": "Google Cloud Platform屬於下列哪一種雲端部署模式？",
+    "options": {
+        "A": "公有雲",
+        "B": "私有雲",
+        "C": "社群雲",
+        "D": "混合雲"
+    },
+    "answer": "A"
+    },
+    {
+    "question": "學校內部建立雲端平台並由內部人員維護，屬於下列哪一種？",
+    "options": {
+        "A": "公有雲",
+        "B": "私有雲",
+        "C": "社群雲",
+        "D": "混合雲"
+    },
+    "answer": "B"
+    },
+    {
+    "question": "公司自建私有雲並結合公有雲擴充資源，屬於哪一種雲端部署模式？",
+    "options": {
+        "A": "公有雲",
+        "B": "私有雲",
+        "C": "社群雲",
+        "D": "混合雲"
+    },
+    "answer": "D"
+    },
+    {
+    "question": "在雲端運算中，能將硬體資源動態分配給使用者的技術是？",
+    "options": {
+        "A": "虛擬化技術",
+        "B": "分散式運算技術",
+        "C": "最佳化技術",
+        "D": "互動式技術"
+    },
+    "answer": "A"
+    },
+    {
+    "question": "下列哪一個不是容器（Container）相關技術？",
+    "options": {
+        "A": "Kubernetes",
+        "B": "Amazon ECS",
+        "C": "Spark",
+        "D": "Docker"
+    },
+    "answer": "C"
+    },
+    {
+    "question": "「Facebook每天產生130TB日誌資料需要分析」屬於大數據的哪個4V特性？",
+    "options": {
+        "A": "Volume",
+        "B": "Velocity",
+        "C": "Variety",
+        "D": "Veracity"
+    },
+    "answer": "A"
+    },
+    {
+    "question": "「Google平均每秒處理40000個搜尋查詢」屬於大數據的哪個4V特性？",
+    "options": {
+        "A": "Volume",
+        "B": "Velocity",
+        "C": "Variety",
+        "D": "Veracity"
+    },
+    "answer": "B"
+    },
+    {
+        "question": "大數據這個概念被提出時，專家學者普遍認為目前資料有著4V的特性，使得傳統的資料庫以及資料處理方式無法有效率地處理。請問「Instagram要從文字、照片、影片、限時動態中分析目前大家最關注的主題」現象是4V中的哪一種？",
+        "options": {
+            "A": "Volumn",
+            "B": "Velocity",
+            "C": "Variety",
+            "D": "Veracity"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "在面臨大數據的挑戰時，第一個要考慮的就是如何將數據從來源端收集到資料庫中以便處理。請問下列哪一項不為訊息佇列？",
+        "options": {
+            "A": "Kafka",
+            "B": "RabbitMQ",
+            "C": "Google PubSub",
+            "D": "Amazon EC2"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "大數據的系統通常依照處理資料的需求分成批次處理和即時處理。請問對於批次系統而言，下列哪一個效能指標不適合用來評量？",
+        "options": {
+            "A": "健全性（Robustness）",
+            "B": "高吞吐量（High Throughput）",
+            "C": "低延遲（Low Latency）",
+            "D": "可以處理數據的規模（Scale）"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "關聯式資料庫主要被調整用於小規模、頻繁讀寫的工作。下列哪一項不屬於NoSQL？",
+        "options": {
+            "A": "MongoDB",
+            "B": "MariaDB",
+            "C": "Redis",
+            "D": "HBase"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "建構Linkedin使用者關係，最適合使用下列哪一項NoSQL？",
+        "options": {
+            "A": "MongoDB",
+            "B": "Redis",
+            "C": "Neo4j",
+            "D": "HBase"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "儲存含文字、圖片、連結的部落格貼文最適合使用哪一種NoSQL？",
+        "options": {
+            "A": "MongoDB",
+            "B": "Redis",
+            "C": "Neo4j",
+            "D": "HBase"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "提升線上遊戲操作速度最適合用哪一種NoSQL？",
+        "options": {
+            "A": "MongoDB",
+            "B": "Redis",
+            "C": "Neo4j",
+            "D": "HBase"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "儲存大型郵件資料（如120TB）最適合使用哪一種NoSQL？",
+        "options": {
+            "A": "MongoDB",
+            "B": "Redis",
+            "C": "Neo4j",
+            "D": "HBase"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "組成企業人工智慧團隊時，下列哪一角色不屬於典型角色？",
+        "options": {
+            "A": "機器學習科學家",
+            "B": "資料科學家",
+            "C": "銷售人員",
+            "D": "軟體工程師"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "「新漢和清大合作打造挑瑕疵咖啡豆機器人」之參與角度為？",
+        "options": {
+            "A": "AI平台供應者",
+            "B": "AI內容供應者",
+            "C": "AI+",
+            "D": "+AI"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "Microsoft提供認知服務API的參與角度為？",
+        "options": {
+            "A": "AI平台供應者",
+            "B": "AI內容供應者",
+            "C": "AI+",
+            "D": "+AI"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Google開放Machine Learning Crash Course的參與角度為？",
+        "options": {
+            "A": "AI平台供應者",
+            "B": "AI內容供應者",
+            "C": "AI+",
+            "D": "+AI"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Amazon開發家庭用語音助理Alexa的參與角度為？",
+        "options": {
+            "A": "AI平台供應者",
+            "B": "AI內容供應者",
+            "C": "AI+",
+            "D": "+AI"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Appier開發Axion人工智慧決策平台屬於？",
+        "options": {
+            "A": "AI平台供應者",
+            "B": "AI內容供應者",
+            "C": "AI+",
+            "D": "+AI"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "中山醫學大學建立肺炎診斷模型，參與角度為？",
+        "options": {
+            "A": "AI平台供應者",
+            "B": "AI內容供應者",
+            "C": "AI+",
+            "D": "+AI"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "下列哪一項不屬於支援人工智慧終端裝置運算的硬體？",
+        "options": {
+            "A": "iPhone X的Face ID晶片",
+            "B": "Google的Pixel Visual Core晶片",
+            "C": "Nvidia的Tesla P100晶片",
+            "D": "Intel的Neural Compute Stick晶片"
+        },
+        "answer": "C"
+    }
+]

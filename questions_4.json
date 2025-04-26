@@ -1,0 +1,660 @@
+[
+    {
+      "question": "1. 機器學習模型中，下列關於模型的偏差（Bias）與變異（Variance）之描述哪一項正確？",
+      "options": {
+        "A": "希望訓練好的模型能是高變異、低偏差",
+        "B": "高偏差代表模型過於複雜",
+        "C": "高變異代表模型過於簡單",
+        "D": "偏差與變異之間存在一平衡（Trade-off）關係"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "2. 二元分類問題中，如果資料存在類別極度不平衡的問題，建立模型後在測試集達到了99%的準確度（Accuracy），下列描述哪一項正確？",
+      "options": {
+        "A": "模型有足夠高的準確度，可上線運行",
+        "B": "準確率（Accuracy）不適合用來評估二元分類問題",
+        "C": "應使用其他指標來評估不平衡的二元分類問題",
+        "D": "可能有過擬合的風險，應更換更簡單的模型"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "3. 如附圖所示，三個模型是對於訓練資料的擬合程度，下列敘述哪一項正確？",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1FwuZfpWkMlPUt1C54Gw3PjbU99Z-TL3HCl0ReKO7ChVkKi0U8fjipYvUHcuiqZhq8DBYS2NzLkAJcvjO2p-yhqO0In5lXsUMMzcKEYuC9_wtDJlWAN5aWGkOPQiOug98U7_XdqfG8URw/s1600/AB04003.bmp",
+      "options": {
+        "A": "最左邊圖片的模型有較高的變異（Variance）",
+        "B": "中間圖片的模型複雜度不足",
+        "C": "最右邊圖片的模型可能是過擬合（Overfitting）",
+        "D": "三個模型的訓練結果都不好"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "4. 關於機器學習模型的敘述，下列哪一項正確？",
+      "options": {
+        "A": "一個模型如果在訓練集有較高的準確率（Accuracy），說明這個模型一定比較好",
+        "B": "如果增加模型的複雜度，則測試集的錯誤率會降低",
+        "C": "如果增加模型的複雜度，則訓練集的錯誤率會降低",
+        "D": "訓練集的錯誤率越低，測試集的錯誤也會跟著越低"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "5. 關於訓練集與測試集的比例，下列哪一項較為正確？",
+      "options": {
+        "A": "訓練集：測試集 ＝ ６：４",
+        "B": "訓練集：測試集 ＝ ５：５",
+        "C": "訓練集：測試集 ＝ ２：８",
+        "D": "比例不須固定，須根據資料集判斷"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "6. 當模型發生過擬合（Overfitting）的情形時，下列哪一種方法無法緩解？",
+      "options": {
+        "A": "減少模型複雜度",
+        "B": "蒐集更多資料",
+        "C": "增加模型訓練的時間",
+        "D": "使用正則化"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "7. 關於評估指標F1-Score的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "為精準率（Precision）及召回率（Recall）的調和平均數",
+        "B": "計算公式為(2 * Precision * Recall) / (Precision + Recall)",
+        "C": "目前僅有F1-Score而不存在F2-Score",
+        "D": "可用在多類別分類的問題"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "8. 替線性迴歸模型增加一個不重要的特徵（Feature）後，R-square通常會發生什麼變化？",
+      "options": {
+        "A": "增加",
+        "B": "減少",
+        "C": "不變",
+        "D": "不一定"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "9. 關於K折交叉驗證（K-fold Cross Validation）的敘述，下列哪一項正確？",
+      "options": {
+        "A": "K值越大越好",
+        "B": "越大的K值，模型評估的穩健度會越高",
+        "C": "增加K值不會影響訓練的時間",
+        "D": "K不可以等於資料樣本數"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "10. 關於正規化參數L1、L2的敘述，下列哪一項錯誤？",
+      "options": {
+        "A": "L1正規化偏向稀疏化，能夠有效去除無用的特徵",
+        "B": "L2正規化避免模型參數過於複雜，有效減緩過擬合",
+        "C": "L1、L2都是針對訓練資料做處理",
+        "D": "L1、L2正規化可以同時使用"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "11. 關於決策樹（Decision Tree）模型的敘述，下列哪一項錯誤？",
+      "options": {
+        "A": "使用訊息增益來衡量切分點",
+        "B": "若不限制樹的深度，則最終每個節點上的樣本都屬於同個類別",
+        "C": "是一具有可視化，可解釋力高的模型",
+        "D": "決策樹相當穩健，不容易發生過擬合的情形"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "12. 若我們希望使用決策樹（Decision Tree）應用在巨量的資料集上，下列哪一種方式可以幫助我們最明顯減少訓練時間？",
+      "options": {
+        "A": "減少樹的數量",
+        "B": "使用熵（Entropy）來衡量訊息增益",
+        "C": "使用吉尼係數（Gini Index）來衡量訊息增益",
+        "D": "降低樹的深度"
+      },
+      "answer": "D"
+    },
+    {
+      "question": "13. 關於機器「學習」這個詞的意義，請問下列描述哪一種較為正確？",
+      "options": {
+        "A": "透過大量機器資源，從過去演算法中自動學習更好的規則",
+        "B": "設定好目標函數，透過特定演算法從資料中學習出隱含的規則",
+        "C": "利用大量未整理、未標記的資料，使用演算法自行歸納整理",
+        "D": "利用程式碼告訴機器規則，讓機器自己學習分析"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "14. 關於隨機森林（Random Forest）的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "是一種集成學習（Ensemble Learning）的方法",
+        "B": "每次訓練出來的森林可能有不同的結果",
+        "C": "每棵樹使用相同的訓練資料與特徵生成",
+        "D": "透過每棵樹投票的方式決定最後的預測結果"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "15. 對於自助抽樣（Bootstrapping）演算法與提升（Boosting）演算法，下列描述哪一項錯誤？",
+      "options": {
+        "A": "Boosting演算法會根據前一個弱模型的結果進一步優化",
+        "B": "Bootstrapping演算法透過隨機性來降低過擬合的情形",
+        "C": "Bootstrapping演算法通常使用取後不放回的方式進行取樣",
+        "D": "Boosting演算法是結合多個弱學習模型的結果，提升表現"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "16. 關於主成分分析（Principal Component Analysis）的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "使用主成分分析前必須對資料做正規化",
+        "B": "主成分分析可以將資料降維至任意維度（至少一維）",
+        "C": "資料降至低維度後的視覺化通常不具參考價值",
+        "D": "降維後的特徵通常難以被解釋"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "17. 關於K-means分群法的描述，下列哪一項錯誤？",
+      "options": {
+        "A": "K-means中的K需要自行設定",
+        "B": "衡量組內的距離算法可使用歐式距離",
+        "C": "K-means算法可以保證找到全域最佳解",
+        "D": "起始點的選取可以有多種選擇"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "18. 如果支持向量機（Support Vector Machine）的模型發生欠擬合（Underfitting）的情形，下列哪一種方法可以改善？",
+      "options": {
+        "A": "減小懲罰參數C的值",
+        "B": "增加懲罰參數C的值",
+        "C": "減小gamma參數",
+        "D": "增加訓練時間"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "19. 對於監督式學習（Supervised Learning）與無監督式學習（Unsupervised Learning）的描述，下列哪一項正確？",
+      "options": {
+        "A": "目前市場上以無監督式學習的應用較為廣泛",
+        "B": "監督式學習需要已完整標記的資料",
+        "C": "無監督式學習不需要使用目標函數來優化",
+        "D": "無監督式學習不需要任何資料即可訓練"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "20. 若我們有一個高度非線性且變數極多的資料集，下列哪一種演算法比較可能取得好的表現？",
+      "options": {
+        "A": "線性迴歸",
+        "B": "多項式迴歸",
+        "C": "決策樹",
+        "D": "每個模型都可能取得好的結果"
+      },
+      "answer": "C"
+    },
+      {
+    "question": "21. 下列哪一項不是分類問題常用的評估指標（Evaluation Metrics）？",
+    "options": {
+      "A": "F1-Score",
+      "B": "Area Under Curve, AUC",
+      "C": "Mean Square Error, MSE",
+      "D": "R-Square"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "22. 如附圖所示，為Log Loss的曲線圖，橫軸為模型預測的機率，縱軸則是該機率所帶來的Log Loss，請參考此圖判斷下列哪一項為Log Loss的計算公式？",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6cyL_GmGPy8o_YtfG_Cdsgk9P0FfzO7dck0-YzfewFHLHww0DlvaLmXooIlvZYYqMvPQP39PEZSsvIvnFR5cuVS7MCGDRZ9pTql9NuEXvQWbqtfNXoOKZ_q33Ry2-9M95aGyfnhYUpegI/s1600/AB04022.bmp",
+    "options": {
+      "A": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjx6CKIJoVwQZpRd5PAsv1iL46ykXYqcdOkGQrwV2_JCIv42jq-MsqQafl9fC156l1b01FZ6hIc4p2tqi6atr6skluOvkTJ7stchFOL0GCe-CQYpw84XSeEb8dxt0EVqUPsxhIcQ9gJv4FH/s1600/AB10401.bmp"]
+          },
+      "B": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUBwVW5kC2iyBans63NZo0XaZykCQBbpkXpWHnHjtUIplp0dJnWsA3yWWRQZ0MQApmFFkX6ABfTF5mNh0Iwkg4ZtjuXdk-B1rsfjbpQw9BnVnh-JCG8QmqR7MLLQn92CfJ51eCn1qqluqb/s1600/AB10402.bmp"]
+          },
+      "C": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhG7r0AWKD3Jka_C9gaWFQmfO1FOs7xxdz_f4o1vy-xyzZntuVWWvGvEs0mmfn_akioD87G1a98GY_9DyrZueoHj7Lg1nmy_43XwBDfvxoRVxhsR7MHV-mHx-t-5vRrTqyPp1pZCImMuEV5/s1600/AB10403.bmp"]
+          },
+      "D": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_5__PF2ZkrV_vFTEExyc13yI7ENCjifh3hsrvv-5zGs51YiByzeO4FyLARe8Xe7vEguW44tghEpfxqL5b87Y0qrBXqeLVLJ80bGvqs8GjqWI-mS-rq5xTSveL63R_y3SZgDifBMzhfXRi/s1600/AB10404.bmp"]
+          }
+    },
+    "answer": "B"
+  },
+  {
+    "question": "23. 關於相關係數（Correlation coefficient）的描述，下列哪一項錯誤？",
+    "options": {
+      "A": "其值在0至1之間",
+      "B": "相關係數是衡量變數之間的線性相關性",
+      "C": "相關係數就算很接近最大值，也不一定代表兩個變數有因果關係",
+      "D": "可用於衡量迴歸模型的表現"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "24. 關於常見的模型衡量標準，平均絕對誤差（Mean Absolute Error, MAE）與均方根誤差（Root Mean Square Error, RMSE）的描述，下列哪一項錯誤？",
+    "options": {
+      "A": "兩者對離群值都不敏感",
+      "B": "兩者的值落在0至無限大之間",
+      "C": "兩者都可以使用在迴歸的問題上",
+      "D": "兩者都是數值越低，代表模型越精準"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "25. 關於梯度提升機（Gradient Boosting Machine）的描述，下列哪一項錯誤？",
+    "options": {
+      "A": "使用集成（Ensemble）方法中的Boosting方法",
+      "B": "使用大量弱學習器（Weak Learner）結合來提升模型準確度",
+      "C": "弱學習器彼此之間無關聯性",
+      "D": "可用於迴歸與分類問題"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "26. 實務上經常會遇到樣本分布不均衡的情形。如詐騙偵測，瑕疵檢測等，下列哪一種方法並不能解決樣本不均衡的問題？",
+    "options": {
+      "A": "對類別較少的資料進行過抽樣（Oversampling）",
+      "B": "對類別較多的資料進行低抽樣（Undersampling）",
+      "C": "在目標函數中，提高類別較少的樣本貢獻之損失值（Loss）",
+      "D": "使用維度縮減（Dimension Reduction）來平衡類別"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "27. 下列哪一種模型是無監督式學習（Unsupervised Learning）的常見模型？",
+    "options": {
+      "A": "支持向量機（Support Vector Machine）",
+      "B": "條件隨機域（Conditional Random Field）",
+      "C": "階層式分群法（Hierarchical Clustering）",
+      "D": "決策樹（Decision Tree）"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "28. 下列哪一種演算法不能用來對高維度的數據進行降維（Dimension Reduction）？",
+    "options": {
+      "A": "奇異值分解（Singular Value Decomposition）",
+      "B": "主成分分析（Principal Component Analysis）",
+      "C": "自編碼器（Autoencoder）",
+      "D": "脊迴歸（Ridge Regression）"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "29. 關於超參數搜索（Hyperparameter Searching）的描述，下列哪一項錯誤？",
+    "options": {
+      "A": "超參數的設置對模型的訓練過程會有很大的影響",
+      "B": "正確的超參數搜尋應搭配Cross Validation進行",
+      "C": "超參數指的是模型訓練時內部在更新的參數",
+      "D": "不同資料集的最佳參數配置可能不同"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "30. 機器學習中，特徵工程（Feature Engineering）是很重要的工作之一，下列關於特徵工程的描述哪一項錯誤？",
+    "options": {
+      "A": "對問題的領域有深入的了解能夠提出更關鍵的特徵（Features）",
+      "B": "可使用Ridge Regression或樹模型進行特徵選取",
+      "C": "可對數值特徵做數值轉換，如相乘、相除等等獲得更多特徵",
+      "D": "衡量特徵的相關性，可剔除相關性過高的特徵"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "31. 下列哪一項不是隨機森林（Random Forest）演算法可以調整的超參數（Hyperparameter）？",
+    "options": {
+      "A": "樹的最大深度（Max Depth of Tree）",
+      "B": "樹的數量（Numbers of Tree）",
+      "C": "學習率（Learning Rate）",
+      "D": "切分的準則（Criterion）"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "32. 如附圖所示，一個二元分類的問題（YES為Positive），建立模型完成預測後我們得到了一混淆矩陣，請問下列敘述哪一項錯誤？",
+    "options": {
+      "A": "模型準確率（Accuracy）為0.8",
+      "B": "模型的真陽性率（True Positive Rate）為0.875",
+      "C": "模型的偽陰性率（False Negative Rate）為0.1",
+      "D": "模型的精準率（Precision）為0.7"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "33. 二元分類的問題，經常使用0.5當成閾值進行分類，模型預測機率大於0.5判定為1，小於0.5則判定為0。實務上如生產線瑕疵檢測，寧願檢測機台發生誤警報，也不願意漏掉任何一個瑕疵。假設我們有一訓練好的自動瑕疵檢測機台，原本預測閾值大於0.5則判定為瑕疵，如果希望降低漏掉瑕疵的機率，此時我們會如何對閾值做調整來符合產線需求？",
+    "options": {
+      "A": "降低閾值",
+      "B": "提升閾值",
+      "C": "不變",
+      "D": "調整閾值並不會改變判定結果"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "34. 關於梯度下降法（Gradient Descent），下列哪一項正確？(L為目標函數，X為模型參數）",
+    "options": {
+      "A": "透過梯度下降法必定可以找到目標函數極小值",
+      "B": "往dL / dx切線的反方向更新參數",
+      "C": "往dL / dx切線的方向更新參數",
+      "D": "整體的函數損失值（Loss）不會隨著迭代增加"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "35. 機器學習問題與選用的優化目標函數的對應關係，下列哪一項錯誤？",
+    "options": {
+      "A": "二元分類問題 - 二元交叉熵（Binary Cross-Entropy）",
+      "B": "二元分類問題 - 類別交叉熵（Categorical Cross-Entropy）",
+      "C": "二元分類問題 - 準確率（Accuracy）",
+      "D": "迴歸問題 - 均方誤差（Mean Square Error, MSE）"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "36. 下列哪一項並非類神經網路常用的優化器（Optimizer）？",
+    "options": {
+      "A": "Adam",
+      "B": "RMSProp",
+      "C": "AdaBoost",
+      "D": "Nadam"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "37. 在一個神經網路架構中，兩個全連接層若各為10個神經元，此兩層間的參數量為下列哪一項？",
+    "options": {
+      "A": "100",
+      "B": "110",
+      "C": "30",
+      "D": "1000"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "38. 在一個神經網路架構中，兩個全連接層若第一層有10個神經元，第二層有15個神經元，此兩層間的參數量為下列哪一項？",
+    "options": {
+      "A": "150",
+      "B": "165",
+      "C": "1500",
+      "D": "2250"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "39. 下列哪一項並非類神經網路常見的解決過度擬合（Overfitting）方法？",
+    "options": {
+      "A": "使用Dropout",
+      "B": "使用Regulizers",
+      "C": "增加訓練資料",
+      "D": "增加訓練時間"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "40. 下列哪一種方法可以促使隨機梯度下降法（Stochastic Gradient Descent, SGD）優化器避免困在局部最小值（Local Minimum）？",
+    "options": {
+      "A": "將初始學習率（Learning Rate）設在較大的值上",
+      "B": "在其啟動函數的切線方向上，加上動量（Momentum）",
+      "C": "在其損失函數的切線方向上，加上動量（Momentum）",
+      "D": "在其損失函數的法線方向上，加上動量（Momentum）"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "41. 關於啟動函數（Activation Function）所對應的輸出值域，下列哪一個錯誤？",
+    "options": {
+      "A": "Sigmoid:(0, 1)",
+      "B": "ReLU:(0, Inf)",
+      "C": "LeakyReLU:(-1, Inf)",
+      "D": "Hyperbolic Tangent:(-1, 1)"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "42. 下列哪一種啟動函數（Activation Function）較不會有梯度彌散（Vanishing Gradient）的現象？",
+    "options": {
+      "A": "Tanh",
+      "B": "Sigmoid",
+      "C": "Softsign",
+      "D": "ReLU"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "43. 在遞迴類神經網路（Recurrent Neural Network, RNN）模型中，克服梯度彌散（Vanishing Gradient）最主要的手段為下列哪一項？",
+    "options": {
+      "A": "使用ReLU作為整個神經網路的啟動函數",
+      "B": "加入長短期記憶單元（LSTM Cell）",
+      "C": "加入Dropout layer",
+      "D": "加入1 x 1卷積層"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "44. 在遞迴類神經網路（Recurrent Neural Network, RNN）模型中，克服梯度爆炸（Exploding Gradient）最主要的手段為下列哪一項？",
+    "options": {
+      "A": "使用ReLu作為整個神經網路的啟動函數",
+      "B": "加入長短期記憶單元（LSTM Cell）",
+      "C": "對梯度使用數值切割（Clip Gradient）",
+      "D": "加入1 x 1卷積層"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "45. 關於批次正規化（Batch Normalization），下列哪一項正確？",
+    "options": {
+      "A": "所有特徵一起做正規化（Normalization）",
+      "B": "可以解決梯度彌散（Vanishing Gradient）的問題",
+      "C": "在訓練模式（Training Mode）與推論模式（Inference Mode）所使用的平均數與標準差為同一組數值",
+      "D": "在不論批次（Batch）大小下，使用批次正規化都能取得較好的結果"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "46. 在一個卷積神經網路中，若第N層的輸入大小為7 x 7 x 3（H x W x D），經由20個尺寸為3 x 3 x 3過濾器（Filters），在無填充（No Padding）下，以移步長（Strides）為2處理後，該層之輸出尺寸為下列哪一項？",
+    "options": {
+      "A": "5 x 5 x 3",
+      "B": "5 x 5 x 20",
+      "C": "3 x 3 x 3",
+      "D": "3 x 3 x 20"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "47. 在經過一層池化尺寸為2的最大池化層（Max Pooling）處理後之矩陣A'為下列哪一項？",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOYnOmP1oUhaO3U3a6bHun5tLSvjAR2Zi6GH5nWW5VfwAw3QBhljqPK9uxmlJU3X7jwcjhYLRUTCXyWst8J7uqHjCaOl20AAKaXbYQRiMSkqh0alfcFABo2ULy56FXH4H5ZV83Olp9VFsJ/s1600/AB10405.bmp",
+    "options": {
+      "A": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1c8bbhrEKKJj4PCJuITn0_2NjiVG83qiWM4GAUzkxXndV8UZfeF2TqtNHJGMJf74NG9JHOFClZAPqCuMvjosyR2t3qTY8t1bmO6NjMe8QRi8s2sesbySYtp5jemk3aQlamuyMydd7rMAk/s1600/AB10406.bmp"]
+          },
+      "B": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieunghEl5RAbB49RAJ4w6csubpm8c6KYxIamY_ocNRiDb5AkNIco-cqW04QUXmVcuLeBWa24F0nBmnZdBjnQyHJQ_S7r98c8_GbjRWe8zZmCGPctJ6PUxsjANMx6uyl1xvMhf6oJ6mHRz2/s1600/AB10407.bmp"]
+          },
+      "C": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJsfJ5_vbhB4zaQ1ZRsliQcLI1GPzjbVh0oV8a6pABdYEQgbhZi6wv5EXJN9IQx7kqhWUxY7u1EV3RFnMJravvThnl1uvz3R5yMWBPWwBMSWgVvqVpTPZRqkQx21SGRmX57g8WQrRxxnDd/s1600/AB10408.bmp"]
+          },
+      "D": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiu-e5BBSKRzWq_CP36lmCRSuKBX7QDVfwdjpeS0VswFCUoCJsL6RIHJOWcDjLoelDn3TY-6AZaATonDec0nBQ5kc8CMhgzLS2i8jZVhDA5cdrEhuiTohvyr4Vj8RgaOx0Y61YyPbjAZkBE/s1600/AB10409.bmp"]
+          }
+    },
+    "answer": "A"
+  },
+  {
+    "question": "48. 在經過一層池化尺寸為2的平均池化層（Average Pooling）處理後之矩陣A'為哪一項？",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOYnOmP1oUhaO3U3a6bHun5tLSvjAR2Zi6GH5nWW5VfwAw3QBhljqPK9uxmlJU3X7jwcjhYLRUTCXyWst8J7uqHjCaOl20AAKaXbYQRiMSkqh0alfcFABo2ULy56FXH4H5ZV83Olp9VFsJ/s1600/AB10405.bmp",
+    "options": {
+      "A": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1c8bbhrEKKJj4PCJuITn0_2NjiVG83qiWM4GAUzkxXndV8UZfeF2TqtNHJGMJf74NG9JHOFClZAPqCuMvjosyR2t3qTY8t1bmO6NjMe8QRi8s2sesbySYtp5jemk3aQlamuyMydd7rMAk/s1600/AB10406.bmp"]
+          },
+      "B": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieunghEl5RAbB49RAJ4w6csubpm8c6KYxIamY_ocNRiDb5AkNIco-cqW04QUXmVcuLeBWa24F0nBmnZdBjnQyHJQ_S7r98c8_GbjRWe8zZmCGPctJ6PUxsjANMx6uyl1xvMhf6oJ6mHRz2/s1600/AB10407.bmp"]
+          },
+      "C": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJsfJ5_vbhB4zaQ1ZRsliQcLI1GPzjbVh0oV8a6pABdYEQgbhZi6wv5EXJN9IQx7kqhWUxY7u1EV3RFnMJravvThnl1uvz3R5yMWBPWwBMSWgVvqVpTPZRqkQx21SGRmX57g8WQrRxxnDd/s1600/AB10408.bmp"]
+          },
+      "D": { 
+          "image":["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiu-e5BBSKRzWq_CP36lmCRSuKBX7QDVfwdjpeS0VswFCUoCJsL6RIHJOWcDjLoelDn3TY-6AZaATonDec0nBQ5kc8CMhgzLS2i8jZVhDA5cdrEhuiTohvyr4Vj8RgaOx0Y61YyPbjAZkBE/s1600/AB10409.bmp"]
+          }
+    },
+    "answer": "C"
+  },
+  {
+    "question": "49. 關於自編碼器（AutoEncoder）的敘述，下列哪一項正確？",
+    "options": {
+      "A": "可用於資料降維",
+      "B": "屬於監督式學習的一種",
+      "C": "神經網路的結構必須是對稱的",
+      "D": "訓練後的神經網路之參數無法遷移到其他任務，如分類問題"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "50. 關於訓練深度神經網路時，下列敘述哪一種錯誤？",
+    "options": {
+      "A": "使用圖形處理單元（GPU）可以比用中央處理器（CPU）更加快速",
+      "B": "當GPU記憶體不足時，降低要送進神經網路中的批量大小（Batch Size）可以解決",
+      "C": "用Multi-GPU的方式可以加快神經網路的訓練",
+      "D": "用Multi-GPU可以讓訓練速度隨著GPU數量呈現線性成長"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "51. 關於卷積尺寸為1 x 1之卷積層，下列敘述哪一項錯誤？",
+    "options": {
+      "A": "可用於降低維度，增加運算效率與降低內存消耗",
+      "B": "可以用增加維度（Channels）實現跨維度整合",
+      "C": "首次在Inception Network中提出，又被稱為mlp Convolution layer",
+      "D": "為了增加運算效率，通常搭配Tanh作為該層的啟動函數"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "52. 物件偵測（Object Detection）是電腦視覺中的經典問題，下列哪一項深度學習模型架構不是物件偵測常用的模型？",
+    "options": {
+      "A": "YOLO（You Only Look Once）",
+      "B": "R-CNN",
+      "C": "Faster R-CNN",
+      "D": "Sequence-to-Sequence"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "53. 下列哪一項並非生成式對抗網路（Generative Adversarial Network, GAN）的常見應用範圍？",
+    "options": {
+      "A": "圖片生成（Image Generation）",
+      "B": "解析度提升（Super Resolution）",
+      "C": "圖像風格轉換（Image Style Transfer）",
+      "D": "圍棋AI 程式"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "54. 關於殘差網路（Residual Network），下列哪一項錯誤？",
+    "options": {
+      "A": "透過將每層的目標函數設為零矩陣，以達到傳遞殘差的效果",
+      "B": "在影像辨識的效果上優於由Alex Krizhevsky、Geoffrey E. Hinton和Ilya Sutskever等人所提出之AlexNet",
+      "C": "因為使用殘差設計，在卷積層的啟動函數上可以改用有範圍限制的Sigmoid或Tanh以達到將各層均化的效果",
+      "D": "是目前卷積神經網路中常用的架構"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "55. 關於深度學習模型的資料前處理，下列哪一項錯誤？",
+    "options": {
+      "A": "輸入可以是任何型態的資料",
+      "B": "特徵通常需要經過正規化（Normalization）",
+      "C": "若資料有缺失值，必須先經過填補",
+      "D": "若資料有類別型態（Categorical）資料，必須使用一位有效編碼（One-Hot Encoding）轉換"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "56. 下列哪一項並非近年來深度學習受到廣泛重視的原因？",
+    "options": {
+      "A": "深度學習與神經網路是一個全新的領域",
+      "B": "我們可以蒐集/取得更大量的資料",
+      "C": "硬體的運算能力增強",
+      "D": "在國際圖像辨識大賽取得優異的成績"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "57. 關於訓練深度學習模型的敘述，下列哪一項正確？",
+    "options": {
+      "A": "若模型參數過少，可能會導致擬合不足（Underfitting）",
+      "B": "若訓練損失沒有下降，我們應該調高學習率（Learning Rate），加速訓練",
+      "C": "降低訓練資料集的數量不會影響模型訓練的表現",
+      "D": "資料的品質與訓練結果無關，只要資料量夠大，再髒的資料都可以得到不錯的結果"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "58. 關於各種模型與其可以解決之問題的配對，下列哪一種錯誤？",
+    "options": {
+      "A": "CycleGAN - 語意理解",
+      "B": "U-Net - 圖像語義分割",
+      "C": "Attention-Based Network（Transformer） - 機器翻譯",
+      "D": "YOLO - 物體偵測"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "59. 下列哪一項並非Q-Learning中的要素？",
+    "options": {
+      "A": "行動（Action）",
+      "B": "監督（Supervise）",
+      "C": "狀態（State）",
+      "D": "酬賞（Reward）"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "60. 在Q-Learning中，我們常使用Epsilon來作為控制代理者保守程度的參數，關於Epsilon之敘述，下列哪一項正確？",
+    "options": {
+      "A": "Epsilon可以控制代理者對於酬賞（Reward）之重視程度",
+      "B": "Epsilon可作為選擇行為時的隨機化程度指標",
+      "C": "不隨訓練過程改變Epsilon會得到比隨時間改變Epsilon更好的結果",
+      "D": "Epsilon與學習率呈正比"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "61. 關於Q-Learning與Policy based learning之比較，下列哪一項錯誤？",
+    "options": {
+      "A": "神經網路的輸出：價值狀態vs.動作之機率",
+      "B": "學習方式：根據經驗修正環境狀態Q值vs.透過實際行為造成的結果修正動作",
+      "C": "更新方式：單步更新vs.回合更新",
+      "D": "動作型態：連續值動作（如0~1）vs.離散值動作（如上、下、左、右）"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "62. 在處理實例分割（Instance Segmentation）的網路Mask-RCNN中使用了多個損失函數，下列哪一項並非使用在該神經網路中？",
+    "options": {
+      "A": "Binary Cross-Entropy",
+      "B": "Hinge Loss",
+      "C": "Catgorical Cross-Entropy",
+      "D": "Smooth L1 Loss"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "63. 在建置神經網路層的過程中，權重（Weights）與偏差（Bias）的起始值扮演重要的角色。請問關於權重與偏差之敘述，下列哪一項錯誤？",
+    "options": {
+      "A": "權重的起始值可為正數或負數",
+      "B": "不同的權重起始點將可能導致最後模型收斂位置不同",
+      "C": "各層的權重可以使用統一的常數(c)作為起始值",
+      "D": "各層的偏差可以使用統一的常數(c)作為起始值"
+    },
+    "answer": "C"
+  }
+]

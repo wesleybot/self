@@ -38,7 +38,7 @@
   <!-- 主內容 -->
   <main class="container py-5 flex-grow-1">
     <h1 class="mb-5 text-center">主要功能</h1>
-  
+
     <!-- V2 功能 -->
     <section class="mb-5">
       <h2 class="mb-4">【V2功能介紹】</h2>
@@ -56,7 +56,7 @@
         </div>
       </div>
     </section>
-  
+
     <!-- V3 功能 -->
     <section class="mb-5">
       <h2 class="mb-4">【V3（測試階段中）嶄新 UI 設計，操作更直覺、便利】</h2>
@@ -75,7 +75,7 @@
         </div>
       </div>
     </section>
-  
+
     <!-- 安裝與教學 -->
     <h2 class="mb-4">安裝說明</h2>
     <ol class="mb-5">
@@ -83,15 +83,32 @@
       <li>點擊 <strong>新增至 Chrome</strong>，並在擴充功能頁面啟用。</li>
       <li>安裝完成後，點擊工具圖示進入設定。</li>
     </ol>
-  
-    <h2 class="mb-4">使用教學</h2>
-    <ol>
-      <li>在「區域篩選」設定：隱藏不良／僅顯示指定區域，並選擇自動點擊位置。</li>
-      <li>在「購票流程」設定：可只顯示立即訂購或自動依日期選擇。</li>
-      <li>填入「張數設定」與「驗證問題答案」。</li>
-      <li>在「授權管理」輸入並驗證金鑰以解鎖高級功能。</li>
-      <li>前往 tixCraft 購票頁面，腳本自動執行動作。</li>
-    </ol>
+
+    <!-- 操作教學輪播 -->
+    <h2 class="mb-4 text-center">操作教學影片</h2>
+<div id="videoTutorialCarousel" class="carousel slide mx-auto mb-5" data-bs-ride="carousel" style="max-width: 720px;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/Gq06gxe14lQ?si=w4dPW9rLOwNMpD-q" allowfullscreen></iframe>
+      </div>
+      <div class="text-center mt-2">票速通V2 功能操作影片</div>
+    </div>
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <iframe src="" allowfullscreen ></iframe>
+      </div>
+      <div class="text-center mt-2">票速通V3 功能操作影片（尚未出爐）</div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#videoTutorialCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#videoTutorialCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
   </main>
 
   <!-- 頁尾 -->

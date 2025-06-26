@@ -86,28 +86,29 @@
 
     <!-- 操作教學輪播 -->
     <h2 class="mb-4 text-center">操作教學影片</h2>
-<div id="videoTutorialCarousel" class="carousel slide mx-auto mb-5" data-bs-ride="carousel" style="max-width: 720px;">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/Gq06gxe14lQ?si=w4dPW9rLOwNMpD-q" allowfullscreen></iframe>
+    <!-- 關閉自動輪播：data-bs-ride="false" 並加上 data-bs-interval="false" -->
+    <div id="videoTutorialCarousel" class="carousel slide mx-auto mb-5" data-bs-ride="false" data-bs-interval="false" style="max-width: 720px;">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/Gq06gxe14lQ?si=w4dPW9rLOwNMpD-q" allowfullscreen></iframe>
+          </div>
+          <div class="text-center mt-2">票速通V2 功能操作影片</div>
+        </div>
+        <div class="carousel-item">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/WwGOGvM8rWw?si=fECqsk72H2wmgtQe" allowfullscreen></iframe>
+          </div>
+          <div class="text-center mt-2">票速通V3 功能操作影片</div>
+        </div>
       </div>
-      <div class="text-center mt-2">票速通V2 功能操作影片</div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#videoTutorialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#videoTutorialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-    <div class="carousel-item">
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/WwGOGvM8rWw?si=fECqsk72H2wmgtQe" allowfullscreen ></iframe>
-      </div>
-      <div class="text-center mt-2">票速通V3 功能操作影片</div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#videoTutorialCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#videoTutorialCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
 
   </main>
 

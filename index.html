@@ -3,33 +3,191 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>票速通｜維護中</title>
+  <title>票速通｜首頁</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" href="icon/icon_128.png" type="image/png" />
+
   <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-      background: #f8f9fa;
-      color: #333;
-      text-align: center;
+    :root{
+      --primary:#0066cc;
+      --gradient-start:#1fa2ff;
+      --gradient-mid:#12d8fa;
+      --gradient-end:#a6ffcb;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: .5rem;
+
+    /* ----- Sticky-footer 基本版型 ----- */
+    html{height:100%;}
+    body{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      padding-top:64px;          /* offset for navbar */
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+      background:#f8f9fa;
+      scroll-behavior:smooth;
     }
-    p {
-      font-size: 1.25rem;
-      margin: 0;
+
+    /* ----- Hero ----- */
+    .hero{
+      background:linear-gradient(135deg,var(--gradient-start) 0%,var(--gradient-mid) 50%,var(--gradient-end) 100%);
+      color:#fff;
     }
+    .hero h1{font-size:clamp(2.2rem,6vw,3.5rem);}
+
+    /* Section spacing */
+    section{padding:4rem 0;}
+
+    /* Icon circle */
+    .icon-circle{
+      width:64px;height:64px;border-radius:50%;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:var(--primary);color:#fff;font-size:1.75rem;
+    }
+
+    /* Back-to-top button */
+    #backToTop{
+      position:fixed;bottom:40px;right:32px;width:48px;height:48px;
+      border-radius:50%;background:var(--primary);color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 3px 6px rgba(0,0,0,.2);
+      opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;
+      z-index:1030;cursor:pointer;
+    }
+    #backToTop.show{opacity:1;visibility:visible;}
   </style>
 </head>
 <body>
-  <div>
-    <h1>網站維護中</h1>
-    <p>我們正在進行系統升級，請稍後再試。</p>
-  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">票速通</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="changelog.html">更新日誌</a></li>
+          <li class="nav-item"><a class="nav-link" href="merch.html">周邊商品</a></li>
+          <li class="nav-item"><a class="nav-link" href="disclaimer.html">免責聲明</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">聯絡我們</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ---------- 主要內容 ---------- -->
+  <main class="flex-grow-1">
+
+    <!-- Hero -->
+    <header class="hero text-center py-5">
+      <div class="container py-5">
+        <h1 class="fw-bold mb-3">搶票，不必再拼手速！</h1>
+        <p class="lead mb-4">把秒殺門票交給 <strong>票速通</strong>，多年實戰經驗，快速完成委託。</p>
+        <a href="#booking" class="btn btn-light btn-lg shadow-sm">立即預約購票</a>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2 class="h3 fw-bold text-center mb-4">我們是誰？</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <p class="fs-5 text-center">
+              票速通存在是為了<strong>「讓追星人看到自己心愛的偶像」</strong>──
+              我們專門購買<strong>任何您委託的演唱會</strong>門票。<br>
+              透過多年購票技巧與經驗，即使純人工也能提高成功率，幫助粉絲迅速鎖定心儀座位。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="bg-white" id="why">
+      <div class="container">
+        <h2 class="h3 fw-bold text-center mb-5">為什麼需要票速通？</h2>
+        <div class="row g-4">
+          <div class="col-md-4 text-center">
+            <div class="icon-circle mb-3">⚡️</div>
+            <h5 class="fw-bold mb-2">多年購票經驗</h5>
+            <p class="text-muted">歷經多場實戰驗證，人工迅速反應，成功率大幅領先。</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="icon-circle mb-3">🔒</div>
+            <h5 class="fw-bold mb-2">安全交易</h5>
+            <p class="text-muted">銀行轉帳或第三方金流，買到才付款，保障您的權益與資金安全。</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="icon-circle mb-3">📈</div>
+            <h5 class="fw-bold mb-2">售後服務</h5>
+            <p class="text-muted">票買到的那刻，服務才剛開始，讓您後續取票無憂。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking">
+      <div class="container">
+        <h2 class="h3 fw-bold text-center mb-4">如何找我們預約購票？</h2>
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8 text-center">
+            <p class="fs-5">
+              加入官方 LINE 帳號 <strong>@434aujul</strong>（記得加 <code>@</code>），
+              填寫預約表：輸入 <em>場次、票價、張數</em>，我們於開賣前主動與您確認。
+            </p>
+            <a href="https://line.me/R/ti/p/@434aujul" target="_blank" class="btn btn-success btn-lg">加入 LINE 預約</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rules -->
+    <section class="bg-white" id="rules">
+      <div class="container">
+        <h2 class="h4 fw-bold mb-4 text-center">委託購票規則</h2>
+        <ul class="list-group list-group-flush mb-5 mx-auto" style="max-width:720px;">
+          <li class="list-group-item">📅 <strong>接單時間：</strong> 國內外演唱會皆可委託，隨時接受預約。</li>
+          <li class="list-group-item">💳 <strong>付款方式：</strong> 銀行轉帳或第三方金流（測試中）。買到票才付款，安心保障。</li>
+          <li class="list-group-item">🎫 <strong>票價需求：</strong> LINE 表單請詳細填寫 <em>票價區間、張數</em> 等資訊。</li>
+          <li class="list-group-item">⏱️ <strong>成功保證：</strong> 買不到不收費，零訂金、零風險。</li>
+          <li class="list-group-item">🔄 <strong>改單／退單：</strong> 如非官方退票或演出取消，概不退換。</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Back-to-top -->
+  <div id="backToTop" role="button" aria-label="Back to top"><i class="bi bi-chevron-up fs-4"></i></div>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-light text-center border-top mt-auto">
+    <div class="container small text-muted">
+      © 2025 票速通 ‧ TixCraft 購票輔助 |
+      <a href="https://github.com" target="_blank" class="text-decoration-none">GitHub</a> ·
+      <a href="https://discord.com" target="_blank" class="text-decoration-none">Discord</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* back-to-top visibility */
+    const backToTop=document.getElementById('backToTop');
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>400){backToTop.classList.add('show');}
+      else{backToTop.classList.remove('show');}
+    });
+    backToTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
 </body>
 </html>

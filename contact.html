@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>票速通｜聯絡我們</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="icon" href="icon/icon_128.png" type="image/png" />
+
+  <style>
+    :root{--primary:#0066cc;}
+    html{height:100%;}
+    body{
+      min-height:100vh;display:flex;flex-direction:column;
+      padding-top:64px;background:#f8f9fa;scroll-behavior:smooth;
+    }
+    #backToTop{position:fixed;bottom:40px;right:32px;width:48px;height:48px;
+      border-radius:50%;background:var(--primary);color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 3px 6px rgba(0,0,0,.2);opacity:0;visibility:hidden;
+      transition:opacity .3s ease,visibility .3s ease;z-index:1030;cursor:pointer;}
+    #backToTop.show{opacity:1;visibility:visible;}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">票速通</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="changelog.html">更新日誌</a></li>
+          <li class="nav-item"><a class="nav-link" href="merch.html">周邊商品</a></li>
+          <li class="nav-item"><a class="nav-link" href="disclaimer.html">免責聲明</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">聯絡我們</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ---------- 主要內容 ---------- -->
+  <main class="flex-grow-1">
+    <section class="container py-5">
+      <h1 class="h3 fw-bold text-center mb-5">聯絡票速通</h1>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center">
+            <div class="card-body">
+              <i class="bi bi-line fs-1 text-success mb-2"></i>
+              <h5 class="card-title fw-bold mb-2">LINE 官方帳號</h5>
+              <p class="card-text">ID：<strong>@434aujul</strong></p>
+              <a href="https://line.me/R/ti/p/@434aujul" target="_blank" class="btn btn-success">加入 LINE</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center">
+            <div class="card-body">
+              <i class="bi bi-envelope fs-1 text-primary mb-2"></i>
+              <h5 class="card-title fw-bold mb-2">Email</h5>
+              <p class="card-text">service@comingsoon.co</p>
+              <a href="mailto:service@comingsoon.co" class="btn btn-outline-primary">發送郵件</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center">
+            <div class="card-body">
+              <i class="bi bi-chat-dots fs-1 text-info mb-2"></i>
+              <h5 class="card-title fw-bold mb-2">Threads</h5>
+              <p class="card-text">@ticketspeed_official</p>
+              <a href="#" class="btn btn-outline-info disabled">即將上線</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back-to-top -->
+  <div id="backToTop" role="button" aria-label="Back to top"><i class="bi bi-chevron-up fs-4"></i></div>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-light text-center border-top mt-auto">
+    <div class="container small text-muted">
+      © 2025 票速通 ‧ TixCraft 購票輔助 |
+      <a href="https://github.com" target="_blank" class="text-decoration-none">GitHub</a> ·
+      <a href="https://discord.com" target="_blank" class="text-decoration-none">Discord</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn=document.getElementById('backToTop');
+    window.addEventListener('scroll',()=>window.scrollY>400?btn.classList.add('show'):btn.classList.remove('show'));
+    btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
+</body>
+</html>

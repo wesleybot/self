@@ -102,7 +102,6 @@
             </div>
 
             <!-- 受保護內容 -->
-            <!-- 受保護內容 -->
             <div id="protectedContent" style="display:none;">
                 <h1 class="h3 fw-bold text-center mb-5">會員專區</h1>
 
@@ -110,39 +109,108 @@
                 <section class="mb-5">
                     <h2 class="h4 fw-bold text-center mb-4">主要功能</h2>
 
-                    <!-- V2 功能 -->
-                    <div class="mb-5">
-                        <h3 class="h5 fw-bold mb-3">【V2 功能介紹】</h3>
-                        <div class="card shadow-sm">
-                            <div class="card-body p-0">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">🔐 授權機制：獲取「專屬金鑰」解鎖下方功能</li>
-                                    <li class="list-group-item">自動從 detail 跳轉至 game</li>
-                                    <li class="list-group-item">自動依日期選擇場次</li>
-                                    <li class="list-group-item">客製化只顯示想要的區域 / 價位</li>
-                                    <li class="list-group-item">自動篩選可用區域（隱藏不良／指定區域）</li>
-                                    <li class="list-group-item">自動填入「票張數」與「同意條款」</li>
-                                    <li class="list-group-item">自動輸入驗證問題答案（例：會員優先購會員碼 或 銀行優先購）</li>
-                                </ul>
+                    <!-- 版本分頁 -->
+                    <ul class="nav nav-tabs justify-content-center mb-4" id="versionTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="v2-tab" data-bs-toggle="tab" data-bs-target="#v2" type="button" role="tab" aria-controls="v2" aria-selected="true">V2 功能</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="v3-tab" data-bs-toggle="tab" data-bs-target="#v3" type="button" role="tab" aria-controls="v3" aria-selected="false">V3 功能</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="v3-tab" data-bs-toggle="tab" data-bs-target="#KKTIX" type="button" role="tab" aria-controls="KKTIX" aria-selected="false">KKTIX 功能</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="versionTabContent">
+                        <!-- V2 功能列表 -->
+                        <div class="tab-pane fade show active" id="v2" role="tabpanel" aria-labelledby="v2-tab">
+                            <div class="table-responsive">
+                                <table class="table table-bordered align-middle mb-4">
+                                    <tbody>
+                                        <tr>
+                                            <td>🔐 授權機制：獲取「專屬金鑰」解鎖下方功能</td>
+                                        </tr>
+                                        <tr>
+                                            <td>自動從 detail 跳轉至 game</td>
+                                        </tr>
+                                        <tr>
+                                            <td>自動依日期選擇場次</td>
+                                        </tr>
+                                        <tr>
+                                            <td>客製化只顯示想要的區域 / 價位</td>
+                                        </tr>
+                                        <tr>
+                                            <td>自動篩選可用區域（隱藏不良／指定區域）</td>
+                                        </tr>
+                                        <tr>
+                                            <td>自動填入「票張數」與「同意條款」</td>
+                                        </tr>
+                                        <tr>
+                                            <td>自動輸入驗證問題答案（例：會員優先購會員碼 或 銀行優先購）</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </div>
+                        <!-- V3 功能列表 -->
+                        <div class="tab-pane fade" id="v3" role="tabpanel" aria-labelledby="v3-tab">
+                            <div class="table-responsive">
+                                <table class="table table-bordered align-middle mb-4">
+                                    <tbody>
+                                        <tr>
+                                            <td>可勾選是否啟動輔助功能 / 設定自動啟動時間點</td>
+                                        </tr>
+                                        <tr>
+                                            <td>優化選日期：可選「日期」或「場次名稱」</td>
+                                        </tr>
+                                        <tr>
+                                            <td>選擇日期可自動從上到下 / 下到上</td>
+                                        </tr>
+                                        <tr>
+                                            <td>新增自動電腦選位 / 設定票價或區域選位 / 精準選位</td>
+                                        </tr>
+                                        <tr>
+                                            <td>新增自動選擇餘票剩餘最多 / 由上到下 / 由下到上</td>
+                                        </tr>
+                                        <tr>
+                                            <td>優化「選擇張數」以及「同意條款」</td>
+                                        </tr>
+                                        <tr>
+                                            <td>猜驗證碼（建議手動輸入，功能限非台灣使用）</td>
+                                        </tr>
+                                        <tr>
+                                            <td>新增自動送出功能</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
-                    <!-- V3 功能 -->
-                    <div class="mb-5">
-                        <h3 class="h5 fw-bold mb-3">【V3嶄新 UI，操作更直覺】</h3>
-                        <div class="card border-warning shadow-sm">
-                            <div class="card-body p-0">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">可勾選是否啟動輔助功能 / 設定自動啟動時間點</li>
-                                    <li class="list-group-item">優化選日期：可選「日期」或「場次名稱」</li>
-                                    <li class="list-group-item">選擇日期可自動從上到下 / 下到上</li>
-                                    <li class="list-group-item">新增自動電腦選位 / 設定票價或區域選位 / 精準選位</li>
-                                    <li class="list-group-item">新增自動選擇餘票剩餘最多 / 由上到下 / 由下到上</li>
-                                    <li class="list-group-item">優化「選擇張數」以及「同意條款」</li>
-                                    <li class="list-group-item">猜驗證碼（建議手動輸入，功能限非台灣使用）</li>
-                                    <li class="list-group-item">新增自動送出功能</li>
-                                </ul>
+                        <!-- KKTIX 功能列表 -->
+                        <div class="tab-pane fade" id="KKTIX" role="tabpanel" aria-labelledby="v3-tab">
+                            <div class="table-responsive">
+                                <table class="table table-bordered align-middle mb-4">
+                                    <tbody>
+                                        <p>點選您想要的演唱會節目，並進入座位畫面（https://carrier.kktix.cc/events/XXXXXXXX）<br>
+                                            -> 進入座位頁面（https://kktix.com/events/XXXXXXXX/registrations/new）<br>
+                                            -> 選擇您想要的張數；若有要求的票價請「輸入網頁上完整票價」名稱<br>
+                                            -> 記得勾選「啟動輔助程式」並存檔後，重新載入頁面，即生效。
+                                        </p>
+                                        <tr>
+                                            <td>選擇想要的票券張數（若剩餘 < 您所選的張數，將依照剩餘票數為主）</td>
+                                        </tr>
+                                        <tr>
+                                            <td>可自定義選座位「票價 / 票種 / 詳細位區」</td>
+                                        </tr>
+                                        <tr>
+                                            <td>勾選我已經閱讀並同意 服務條款 與 隱私權政策</td>
+                                        </tr>
+                                        <tr>
+                                            <td>自動點選電腦配位</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -190,8 +258,6 @@
                     </div>
                 </section>
             </div>
-
-
 
         </section>
     </main>

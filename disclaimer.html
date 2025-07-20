@@ -49,7 +49,7 @@
   <main class="flex-grow-1">
     <section class="container py-5">
       <h1 class="h3 fw-bold text-center mb-4">免責聲明</h1>
-  
+
       <div class="card shadow-sm mx-auto" style="max-width:900px;">
         <div class="card-body">
           <p class="mb-3">
@@ -57,7 +57,7 @@
             及其他合法售票平台<strong>輔助購票</strong>之技術。使用本服務前，請您審慎閱讀並同意下列條款；啟用或下載本服務即表示您已完整理解並同意全部內容。
             本文件僅為一般性法律資訊。
           </p>
-  
+
           <ol class="lh-lg">
             <li>
               <strong>合規義務</strong>  
@@ -151,16 +151,38 @@
               本服務保留隨時增修本聲明之權利；修訂內容將於本頁公告並自公告時起生效，恕不另行個別通知。
             </li>
           </ol>
-  
+
           <p class="mb-0">
             如您對本聲明內容有疑問或需行使相關權利，請透過
             <a href="contact.html">聯絡我們</a> 與票速通團隊聯繫。
           </p>
-        </div>
-      </div>
+
+          <!-- ──────── EULA PDF 區 ──────── -->
+          <hr class="my-5">
+
+          <h2 class="h5 mb-3">終端使用者授權協議暨購買條款 (EULA)</h2>
+
+          <!-- 16:9 自適應 iframe；不想自適應可改固定高度 -->
+          <div class="ratio ratio-16x9 mb-3">
+            <iframe
+              src="pdf/kktix_eual.pdf#toolbar=0"
+              title="KKTIX 插件 EULA PDF"
+              loading="lazy"
+              allowfullscreen
+              style="border:1px solid #ced4da;">
+            </iframe>
+          </div>
+
+          <p class="small text-muted">
+            若瀏覽器未能顯示 PDF，請
+            <a href="pdf/kktix_eual.pdf" target="_blank" download>點此下載閱讀</a>。
+          </p>
+          <!-- ──────── /EULA PDF 區 ──────── -->
+
+        </div><!-- /.card-body -->
+      </div><!-- /.card -->
     </section>
   </main>
-  
 
   <!-- Back-to-top -->
   <div id="backToTop" role="button" aria-label="Back to top"><i class="bi bi-chevron-up fs-4"></i></div>
@@ -168,7 +190,7 @@
   <!-- Footer -->
   <footer class="py-4 bg-light text-center border-top mt-auto">
     <div class="container small text-muted">
-      © 2025 票速通 ‧ TixCraft 購票輔助 |
+      © 2025 票速通 ‧ TixCraft/KKTIX 購票輔助 |
       <a href="https://github.com" target="_blank" class="text-decoration-none">GitHub</a> ·
       <a href="https://discord.com" target="_blank" class="text-decoration-none">Discord</a>
     </div>

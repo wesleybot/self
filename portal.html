@@ -13,48 +13,41 @@
     <link rel="icon" href="icon/icon_128.png" type="image/png" />
 
     <style>
-        :root {
-            --primary: #0066cc;
-        }
+        :root { --primary: #0066cc; }
 
-        html {
-            height: 100%;
-        }
+        html { height: 100%; }
 
         body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            padding-top: 64px;
+            padding-top: 64px; /* desktop 預設與 fixed-top navbar 齊平 */
             background: #f8f9fa;
             scroll-behavior: smooth;
+        }
+        /* 調整手機上方間距，避免被 fixed-top navbar 蓋住 */
+        @media (max-width: 991.98px) {
+            body { padding-top: 56px; }
         }
 
         /* Back-to-top */
         #backToTop {
-            position: fixed;
-            bottom: 40px;
-            right: 32px;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity .3s ease, visibility .3s ease;
-            z-index: 1030;
-            cursor: pointer;
+            position: fixed; bottom: 40px; right: 32px; width: 48px; height: 48px; border-radius: 50%;
+            background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,.2); opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility .3s ease;
+            z-index: 1030; cursor: pointer;
         }
+        #backToTop.show { opacity: 1; visibility: visible; }
 
-        #backToTop.show {
-            opacity: 1;
-            visibility: visible;
-        }
+        /* 讓教學圖片、排版在手機自適應 */
+        .tutorial-steps { padding-left: 1rem; }
+        .tutorial-fig img { display: block; max-width: 100%; height: auto; }
+        .tutorial-fig .caption { margin-top: .5rem; }
+        /* 讓手風琴按鈕在小螢幕可換行，不會撐出橫向捲軸 */
+        .accordion-button { white-space: normal; }
+
+        /* 讓成對示意圖在桌機並排、手機堆疊 */
+        .pair-row { row-gap: 1rem; }
     </style>
 </head>
 
@@ -63,7 +56,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">票速通</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="切換導覽">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
@@ -87,17 +80,12 @@
             <div id="loginBox" class="card shadow-sm mx-auto" style="max-width:420px;">
                 <div class="card-body">
                     <h1 class="h4 fw-bold text-center mb-3">會員專區登入</h1>
-                    <p class="text-muted small text-center mb-4">
-                        此頁僅供已購買插件之用戶瀏覽。
-                    </p>
+                    <p class="text-muted small text-center mb-4">此頁僅供已購買插件之用戶瀏覽。</p>
                     <div class="mb-3">
-                        <input type="password" id="passwordInput" class="form-control form-control-lg"
-                            placeholder="請輸入密碼" autocomplete="current-password">
+                        <input type="password" id="passwordInput" class="form-control form-control-lg" placeholder="請輸入密碼" autocomplete="current-password">
                     </div>
                     <button class="btn btn-primary w-100" onclick="checkPassword()">登入</button>
-                    <p class="small text-muted text-center mt-3 mb-0">
-                        若忘記密碼，請聯絡 LINE 客服。
-                    </p>
+                    <p class="small text-muted text-center mt-3 mb-0">若忘記密碼，請聯絡 LINE 客服。</p>
                 </div>
             </div>
 
@@ -109,11 +97,8 @@
                 <!-- ===== V2 操作教學 ===== -->
                 <section class="mb-5">
                     <h2 class="h4 fw-bold text-center mb-4">V2 操作教學</h2>
-                    <div class="alert alert-warning text-center mb-0" role="alert">
-                        正在製作中…99%
-                    </div>
+                    <div class="alert alert-warning text-center mb-0" role="alert">正在製作中…99%</div>
                 </section>
-
 
                 <!-- ===== V3 操作教學 ===== -->
                 <section class="mb-5">
@@ -123,19 +108,15 @@
                         <!-- 功能 1：啟動輔助功能與自動啟動時間 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="v3-f1-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#v3-f1" aria-expanded="false" aria-controls="v3-f1">
-                                    啟動輔助功能與自動啟動時間
-                                </button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f1" aria-expanded="false" aria-controls="v3-f1">啟動輔助功能與自動啟動時間</button>
                             </h2>
-                            <div id="v3-f1" class="accordion-collapse collapse" data-bs-parent="#v3Guide"
-                                aria-labelledby="v3-f1-h">
+                            <div id="v3-f1" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f1-h">
                                 <div class="accordion-body">
                                     <ol class="tutorial-steps">
                                         <li>
                                             <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_1.png" alt="在 V3 設定中開啟輔助功能">
-                                                <figcaption>
+                                                <img src="img/V3/V3_1.png" alt="在 V3 設定中開啟輔助功能" class="img-fluid">
+                                                <figcaption class="caption">
                                                     <p><strong>步驟 1：</strong>在 V3 設定中開啟輔助功能。</p>
                                                     <p>若未勾選，將不會自動從 <code>/detail</code> 跳轉至 <code>/game</code> 頁面。</p>
                                                 </figcaption>
@@ -143,11 +124,10 @@
                                         </li>
                                         <li>
                                             <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_2.png" alt="設定自動啟動時間並儲存">
-                                                <figcaption>
+                                                <img src="img/V3/V3_2.png" alt="設定自動啟動時間並儲存" class="img-fluid">
+                                                <figcaption class="caption">
                                                     <p><strong>步驟 2：</strong>設定自動啟動的時間點，並儲存。</p>
-                                                    <p>若售票時間為 <strong>上午 11:00:00</strong> 開賣，請直接設置為 <strong>上午
-                                                            11:00</strong>。</p>
+                                                    <p>若售票時間為 <strong>上午 11:00:00</strong> 開賣，請直接設置為 <strong>上午 11:00</strong>。</p>
                                                     <p>系統會在剩餘約 5 秒時自動重新整理頁面，直至開賣並自動跳轉到選座位頁。</p>
                                                     <p><strong>建議：</strong>若你人在電腦前，倒數剩 1 秒時可手動重新載入，以爭取刷新時機。</p>
                                                 </figcaption>
@@ -161,41 +141,47 @@
                         <!-- 功能 2：日期 / 場次名稱與節目場次 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="v3-f2-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#v3-f2" aria-expanded="false" aria-controls="v3-f2">
-                                    日期 / 場次名稱與節目場次
-                                </button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f2" aria-expanded="false" aria-controls="v3-f2">日期 / 場次名稱與節目場次</button>
                             </h2>
-                            <div id="v3-f2" class="accordion-collapse collapse" data-bs-parent="#v3Guide"
-                                aria-labelledby="v3-f2-h">
+                            <div id="v3-f2" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f2-h">
                                 <div class="accordion-body">
                                     <ol class="tutorial-steps">
                                         <li>
-                                            <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_3.png" alt="以日期或場次名稱為條件進行設定"
-                                                    style="height: 200px; width: 250px;">
-                                                <img src="img/V3/V3_4.png" alt="以日期或場次名稱為條件進行設定"
-                                                    style="height: 200px; width: 600px;">
-                                                <figcaption>
-                                                    <p><strong>步驟 3：</strong>選擇以「日期」或「場次名稱」為條件。</p>
-                                                    <p><b>前提要件：</b>該場演唱會有三場以上的節目，無法使用「上到下」或「下到上」來做選擇時，才使用！<strong>若兩場內，請看下面「步驟4」即可。</strong>
-                                                    </p>
-                                                    <p>例如有三場以上，想要直接鎖定您想要的日期購票，日期輸入： <code>2025/09/27 (六) 12:00</code>即可。
-                                                    </p>
-                                                </figcaption>
-                                            </figure>
+                                            <div class="row pair-row">
+                                                <div class="col-12 col-md-4">
+                                                    <figure class="tutorial-fig m-0">
+                                                        <img src="img/V3/V3_3.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-12 col-md-8">
+                                                    <figure class="tutorial-fig m-0">
+                                                        <img src="img/V3/V3_4.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3">
+                                                <p><strong>步驟 3：</strong>選擇以「日期」或「場次名稱」為條件。</p>
+                                                <p><b>前提要件：</b>該場演唱會有三場以上的節目，無法使用「上到下」或「下到上」來做選擇時，才使用！<strong>若兩場內，請看下面「步驟4」即可。</strong></p>
+                                                <p>例如有三場以上，想要直接鎖定您想要的日期購票，日期輸入： <code>2025/09/27 (六) 12:00</code>即可。</p>
+                                            </div>
                                         </li>
                                         <li>
-                                            <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_5.png" alt="以日期或場次名稱為條件進行設定"
-                                                    style="height: 200px; width: 250px;">
-                                                <img src="img/V3/V3_6.png" alt="以日期或場次名稱為條件進行設定"
-                                                    style="height: 200px; width: 600px;">
-                                                <figcaption>
-                                                    <p><strong>步驟 4：</strong>若兩場內，請直接選用「上到下」 或 「下到上」即可。</p>
-                                                    <p>系統將自動定位並選取符合條件的節目場次，也忽略「選購一空」。</p>
-                                                </figcaption>
-                                            </figure>
+                                            <div class="row pair-row">
+                                                <div class="col-12 col-md-4">
+                                                    <figure class="tutorial-fig m-0">
+                                                        <img src="img/V3/V3_5.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-12 col-md-8">
+                                                    <figure class="tutorial-fig m-0">
+                                                        <img src="img/V3/V3_6.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3">
+                                                <p><strong>步驟 4：</strong>若兩場內，請直接選用「上到下」 或 「下到上」即可。</p>
+                                                <p>系統將自動定位並選取符合條件的節目場次，也會忽略「選購一空」。</p>
+                                            </div>
                                         </li>
                                     </ol>
                                 </div>
@@ -205,35 +191,25 @@
                         <!-- 功能 3：電腦選位（快速） / 自定義選位 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="v3-f3-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#v3-f3" aria-expanded="false" aria-controls="v3-f3">
-                                    電腦選位（快速） / 自定義選位
-                                </button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f3" aria-expanded="false" aria-controls="v3-f3">電腦選位（快速） / 自定義選位</button>
                             </h2>
-                            <div id="v3-f3" class="accordion-collapse collapse" data-bs-parent="#v3Guide"
-                                aria-labelledby="v3-f3-h">
+                            <div id="v3-f3" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f3-h">
                                 <div class="accordion-body">
                                     <ol class="tutorial-steps">
                                         <li>
                                             <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_7.png" alt="以日期或場次名稱為條件進行設定"
-                                                    style="height: 200px; width: 250px;">
-                                                <figcaption>
+                                                <img src="img/V3/V3_7.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
+                                                <figcaption class="caption">
                                                     <p><strong>步驟 5：</strong>選擇以「電腦選位（快速）」或「自定義選位」。</p>
-                                                    <p><b>特別注意：</b>若您有「自定義選位」輔助插件將<strong>優先選擇您所自定義座位</strong>，接下來才會是跑「只求有票」當中，
-                                                        您所設定的。</p>
+                                                    <p><b>特別注意：</b>若您有「自定義選位」輔助插件將<strong>優先選擇您所自定義座位</strong>，接下來才會是跑「只求有票」當中，您所設定的。</p>
                                                     <ol class="fs-6 mx-auto" style="max-width:760px;">
-                                                        <li>若您要選假設4300票價。
-                                                            請在精準選位輸入：4300 （記得多加一個空白鍵）</li>
-
-                                                        <li>若您要4300裡面的「特B區」
-                                                            請在普通選位輸入：特B區（不用多一個空白鍵）</li>
-
-                                                        <li>若您是要一模一樣完整的「特B區4300」
-                                                            請在普通選位輸入：特B區4300（最前面以及最後面都不用空白鍵）</li>
+                                                        <li>若您要選假設4300票價。請在精準選位輸入：4300（記得多加一個空白鍵）</li>
+                                                        <li>若您要4300裡面的「特B區」請在普通選位輸入：特B區（不用多一個空白鍵）</li>
+                                                        <li>若您是要一模一樣完整的「特B區4300」請在普通選位輸入：特B區4300（最前面以及最後面都不用空白鍵）</li>
                                                     </ol>
                                                 </figcaption>
                                             </figure>
+                                        </li>
                                     </ol>
                                 </div>
                             </div>
@@ -242,24 +218,20 @@
                         <!-- 功能 4：選擇張數 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="v3-f4-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#v3-f4" aria-expanded="false" aria-controls="v3-f4">
-                                    選擇張數
-                                </button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f4" aria-expanded="false" aria-controls="v3-f4">選擇張數</button>
                             </h2>
-                            <div id="v3-f4" class="accordion-collapse collapse" data-bs-parent="#v3Guide"
-                                aria-labelledby="v3-f4-h">
+                            <div id="v3-f4" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f4-h">
                                 <div class="accordion-body">
                                     <ol class="tutorial-steps">
                                         <li>
                                             <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_8.png" alt="以日期或場次名稱為條件進行設定"
-                                                    style="height: 200px; width: 250px;">
-                                                <figcaption>
+                                                <img src="img/V3/V3_8.png" alt="選擇票券張數" class="img-fluid">
+                                                <figcaption class="caption">
                                                     <p><strong>步驟 6：</strong>選擇自己所需的「票券張數」</p>
-                                                    <p><b>特別注意：</b>注意售票系統的購票上限，不要超過嚕>< </p>
+                                                    <p class="mb-0"><b>特別注意：</b>注意售票系統的購票上限，不要超過嚕 ><</p>
                                                 </figcaption>
                                             </figure>
+                                        </li>
                                     </ol>
                                 </div>
                             </div>
@@ -268,23 +240,19 @@
                         <!-- 功能 5：驗證問題答案 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="v3-f5-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#v3-f5" aria-expanded="false" aria-controls="v3-f5">
-                                    驗證問題答案
-                                </button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f5" aria-expanded="false" aria-controls="v3-f5">驗證問題答案</button>
                             </h2>
-                            <div id="v3-f5" class="accordion-collapse collapse" data-bs-parent="#v3Guide"
-                                aria-labelledby="v3-f5-h">
+                            <div id="v3-f5" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f5-h">
                                 <div class="accordion-body">
                                     <ol class="tutorial-steps">
                                         <li>
                                             <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_9.png" alt="以日期或場次名稱為條件進行設定"
-                                                    style="height: 300px; width: 900px;">
-                                                <figcaption>
-                                                    <p><strong>步驟 7：</strong>事先輸入售票系統的驗證問題「卡友」 / 「會員優先購號碼」</p>
+                                                <img src="img/V3/V3_9.png" alt="事先輸入驗證問題" class="img-fluid">
+                                                <figcaption class="caption">
+                                                    <p class="mb-0"><strong>步驟 7：</strong>事先輸入售票系統的驗證問題「卡友」 / 「會員優先購號碼」</p>
                                                 </figcaption>
                                             </figure>
+                                        </li>
                                     </ol>
                                 </div>
                             </div>
@@ -293,24 +261,20 @@
                         <!-- 功能 6：猜驗證碼 / 送出 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="v3-f6-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#v3-f6" aria-expanded="false" aria-controls="v3-f6">
-                                    猜驗證碼 / 送出
-                                </button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f6" aria-expanded="false" aria-controls="v3-f6">猜驗證碼 / 送出</button>
                             </h2>
-                            <div id="v3-f6" class="accordion-collapse collapse" data-bs-parent="#v3Guide"
-                                aria-labelledby="v3-f6-h">
+                            <div id="v3-f6" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f6-h">
                                 <div class="accordion-body">
                                     <ol class="tutorial-steps">
                                         <li>
                                             <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_10.png" alt="以日期或場次名稱為條件進行設定"
-                                                    style="height: 300px; width: 900px;">
-                                                <figcaption>
+                                                <img src="img/V3/V3_10.png" alt="猜驗證碼與自動送出" class="img-fluid">
+                                                <figcaption class="caption">
                                                     <p><strong>步驟 7：</strong>可自行判斷是否需要使用「猜驗證碼」、「自動送出」功能！</p>
-                                                    <p><b>特別注意：</b>（建議手動輸入驗證碼，限非台灣使用）>< </p>
+                                                    <p class="mb-0"><b>特別注意：</b>（建議手動輸入驗證碼，限非台灣使用） ><</p>
                                                 </figcaption>
                                             </figure>
+                                        </li>
                                     </ol>
                                 </div>
                             </div>
@@ -319,24 +283,20 @@
                         <!-- 功能 7：刷釋出票 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="v3-f7-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#v3-f7" aria-expanded="false" aria-controls="v3-f7">
-                                    刷釋出票
-                                </button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f7" aria-expanded="false" aria-controls="v3-f7">刷釋出票</button>
                             </h2>
-                            <div id="v3-f7" class="accordion-collapse collapse" data-bs-parent="#v3Guide"
-                                aria-labelledby="v3-f7-h">
+                            <div id="v3-f7" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f7-h">
                                 <div class="accordion-body">
                                     <ol class="tutorial-steps">
                                         <li>
                                             <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_11.png" alt="以日期或場次名稱為條件進行設定"
-                                                    style="height: 300px; width: 900px;">
-                                                <figcaption>
+                                                <img src="img/V3/V3_11.png" alt="刷釋出票功能" class="img-fluid">
+                                                <figcaption class="caption">
                                                     <p><strong>步驟 7：</strong>可自行判斷是否需要使用「刷釋出票」功能！</p>
-                                                    <p><b>特別注意：</b>（建議設2-5秒區間，比較不會顯示403 error）>< </p>
+                                                    <p class="mb-0"><b>特別注意：</b>（建議設2-5秒區間，比較不會顯示403 error） ><</p>
                                                 </figcaption>
                                             </figure>
+                                        </li>
                                     </ol>
                                 </div>
                             </div>
@@ -347,31 +307,19 @@
                 <!-- ===== KKTIX 操作教學 ===== -->
                 <section class="mb-5">
                     <h2 class="h4 fw-bold text-center mb-4">KKTIX 操作教學</h2>
-                    <div class="alert alert-warning text-center mb-0" role="alert">
-                        正在製作中…99%
-                    </div>
+                    <div class="alert alert-warning text-center mb-0" role="alert">正在製作中…99%</div>
                 </section>
-
 
                 <!-- ===== 特別說明 ===== -->
                 <section class="mb-5">
                     <h2 class="h4 fw-bold text-center mb-4">特別說明「使用KK輔助插件」</h2>
                     <ol class="fs-6 mx-auto" style="max-width:760px;">
                         <img src="img/kktix.png" class="img-fluid mb-3" alt="KKTIX 使用範例">
-                        <li>若您想要隨機選票價。<br>
-                            請不用輸入任何東西即可，只要輸入你要的張數即可。</li><br>
-
-                        <li>若您要選假設$1200票價。<br>
-                            請在「鎖定想要的票價 / 區域 / 座位（擇一即可）」輸入：TWD$1,200 優先順序: 1</li><br>
-
-                        <li>若您要選$1200票價裡面的「VIP單日票10/25」<br>
-                            請在直接輸入：VIP單日票10/25 優先順序: 1</li><br>
-
-                        <li>若您要選$1200票價裡面的VIP單日票10/25裡面的「10/25 3F VIP」<br>
-                            請在直接輸入：10/25 3F VIP 優先順序: 1</li><br>
-
-                        <li>若您要選「圖片上這三個票價都要」請分別設定優先順序。<br>
-                            請在直接輸入：TWD$800 優先順序: 1<br>10/24 3F VIP 優先順序: 2<br>10/25 3F VIP 優先順序: 3</li><br>
+                        <li>若您想要隨機選票價。<br>請不用輸入任何東西即可，只要輸入你要的張數即可。</li><br>
+                        <li>若您要選假設$1200票價。<br>請在「鎖定想要的票價 / 區域 / 座位（擇一即可）」輸入：TWD$1,200 優先順序: 1</li><br>
+                        <li>若您要選$1200票價裡面的「VIP單日票10/25」<br>請在直接輸入：VIP單日票10/25 優先順序: 1</li><br>
+                        <li>若您要選$1200票價裡面的VIP單日票10/25裡面的「10/25 3F VIP」<br>請在直接輸入：10/25 3F VIP 優先順序: 1</li><br>
+                        <li>若您要選「圖片上這三個票價都要」請分別設定優先順序。<br>請在直接輸入：TWD$800 優先順序: 1<br>10/24 3F VIP 優先順序: 2<br>10/25 3F VIP 優先順序: 3</li><br>
                         <p style="color: red;">《請依照 票價最為優先 > 票種 > 區域，預祝各位能夠購買自己理想票券。》</p>
                     </ol>
                 </section>

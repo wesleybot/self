@@ -1,350 +1,621 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>票速通｜會員專區</title>
 
-    <!-- Bootstrap 5.3 & Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Favicon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <link rel="icon" href="icon/icon_128.png" type="image/png" />
+    <link rel="stylesheet" href="css/pstyless.css">
+  </head>
 
-    <style>
-        :root { --primary: #0066cc; }
-
-        html { height: 100%; }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding-top: 64px; /* desktop 預設與 fixed-top navbar 齊平 */
-            background: #f8f9fa;
-            scroll-behavior: smooth;
-        }
-        /* 調整手機上方間距，避免被 fixed-top navbar 蓋住 */
-        @media (max-width: 991.98px) {
-            body { padding-top: 56px; }
-        }
-
-        /* Back-to-top */
-        #backToTop {
-            position: fixed; bottom: 40px; right: 32px; width: 48px; height: 48px; border-radius: 50%;
-            background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 3px 6px rgba(0,0,0,.2); opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility .3s ease;
-            z-index: 1030; cursor: pointer;
-        }
-        #backToTop.show { opacity: 1; visibility: visible; }
-
-        /* 讓教學圖片、排版在手機自適應 */
-        .tutorial-steps { padding-left: 1rem; }
-        .tutorial-fig img { display: block; max-width: 100%; height: auto; }
-        .tutorial-fig .caption { margin-top: .5rem; }
-        /* 讓手風琴按鈕在小螢幕可換行，不會撐出橫向捲軸 */
-        .accordion-button { white-space: normal; }
-
-        /* 讓成對示意圖在桌機並排、手機堆疊 */
-        .pair-row { row-gap: 1rem; }
-    </style>
-</head>
-
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">票速通</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="切換導覽">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link" href="changelog.html">更新日誌</a></li>
-                    <li class="nav-item"><a class="nav-link" href="merch.html">周邊商品</a></li>
-                    <li class="nav-item"><a class="nav-link" href="disclaimer.html">免責聲明</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">聯絡我們</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="portal.html">會員專區</a></li>
-                </ul>
-            </div>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-glass fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-ticket-perforated-fill me-2"></i>票速通
+        </a>
+        <button
+          class="navbar-toggler navbar-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-label="切換導覽"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="changelog.html">更新日誌</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="merch.html">周邊商品</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="disclaimer.html">免責聲明</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">聯絡我們</a>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a
+                class="btn btn-primary btn-sm rounded-pill px-3 active"
+                href="portal.html"
+                style="
+                  background: var(--highlight-color);
+                  border-color: var(--highlight-color);
+                  color: #fff;
+                  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+                "
+              >
+                <i class="bi bi-person-fill me-1"></i> 會員專區
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <!-- ---------- 主要內容 ---------- -->
     <main class="flex-grow-1">
-        <section class="container py-5">
-
-            <!-- 登入盒子 -->
-            <div id="loginBox" class="card shadow-sm mx-auto" style="max-width:420px;">
-                <div class="card-body">
-                    <h1 class="h4 fw-bold text-center mb-3">會員專區登入</h1>
-                    <p class="text-muted small text-center mb-4">此頁僅供已購買插件之用戶瀏覽。</p>
-                    <div class="mb-3">
-                        <input type="password" id="passwordInput" class="form-control form-control-lg" placeholder="請輸入密碼" autocomplete="current-password">
-                    </div>
-                    <button class="btn btn-primary w-100" onclick="checkPassword()">登入</button>
-                    <p class="small text-muted text-center mt-3 mb-0">若忘記密碼，請聯絡 LINE 客服。</p>
-                </div>
+      <section class="container py-5">
+        <div
+          id="loginBox"
+          class="card shadow-lg mx-auto border-0"
+          style="max-width: 420px"
+        >
+          <div class="card-body p-4">
+            <h1 class="h4 fw-bold text-center mb-3 portal-header">
+              <i class="bi bi-person-badge me-2"></i>會員專屬登入
+            </h1>
+            <p class="text-muted small text-center mb-4">
+              歡迎 VIP 用戶！此頁僅供已購買插件之用戶瀏覽。
+            </p>
+            <div class="mb-3">
+              <input
+                type="password"
+                id="passwordInput"
+                class="form-control form-control-lg"
+                placeholder="請輸入密碼"
+                autocomplete="current-password"
+                aria-label="會員密碼"
+              />
             </div>
+            <button
+              class="btn w-100 btn-lg rounded-pill"
+              style="
+                background-color: var(--highlight-color);
+                border-color: var(--highlight-color);
+                color: #fff;
+              "
+              onclick="checkPassword()"
+            >
+              <i class="bi bi-unlock-fill me-2"></i>立即存取
+            </button>
+            <p class="small text-muted text-center mt-3 mb-0">
+              若忘記密碼，請點擊
+              <a href="contact.html" class="fw-bold">聯絡 LINE 客服</a>。
+            </p>
+          </div>
+        </div>
 
-            <!-- 受保護內容 -->
-            <div id="protectedContent" style="display:none;">
-                <h1 class="h3 fw-bold text-center mb-5">會員專區</h1>
+        <div id="protectedContent" style="display: none">
+          <h1 class="h3 fw-bold text-center mb-2 portal-header">
+            <i class="bi bi-shield-lock-fill me-2"></i>會員專屬｜操作指南
+          </h1>
+          <p class="text-muted text-center mb-5">
+            以下為您提供的 V3 及 KKTIX 插件的詳細使用說明。請務必仔細閱讀。
+          </p>
 
-                <!-- ===== 主要功能 ===== -->
-                <!-- ===== V2 操作教學 ===== -->
-                <section class="mb-5">
-                    <h2 class="h4 fw-bold text-center mb-4">V2 操作教學</h2>
-                    <div class="alert alert-warning text-center mb-0" role="alert">正在製作中…99%</div>
-                </section>
+          <section class="mb-5">
+            <h2 class="h4 fw-bold text-center mb-4">
+              <i class="bi bi-journal-text me-2"></i>V2 操作教學 (tixCraft)
+            </h2>
+            <div
+              class="alert alert-warning text-center mb-0 mx-auto"
+              role="alert"
+              style="max-width: 800px"
+            >
+              <i class="bi bi-code-slash me-2"></i
+              ><strong>V2 版本教學</strong> 仍在製作優化中，即將推出！
+            </div>
+          </section>
 
-                <!-- ===== V3 操作教學 ===== -->
-                <section class="mb-5">
-                    <h2 class="h4 fw-bold text-center mb-4">V3 操作教學</h2>
+          <section class="mb-5">
+            <h2 class="h4 fw-bold text-center mb-4">
+              <i class="bi bi-stars me-2"></i>V3 最新版操作教學 (tixCraft)
+            </h2>
 
-                    <div class="accordion" id="v3Guide">
-                        <!-- 功能 1：啟動輔助功能與自動啟動時間 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="v3-f1-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f1" aria-expanded="false" aria-controls="v3-f1">啟動輔助功能與自動啟動時間</button>
-                            </h2>
-                            <div id="v3-f1" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f1-h">
-                                <div class="accordion-body">
-                                    <ol class="tutorial-steps">
-                                        <li>
-                                            <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_1.png" alt="在 V3 設定中開啟輔助功能" class="img-fluid">
-                                                <figcaption class="caption">
-                                                    <p><strong>步驟 1：</strong>在 V3 設定中開啟輔助功能。</p>
-                                                    <p>若未勾選，將不會自動從 <code>/detail</code> 跳轉至 <code>/game</code> 頁面。</p>
-                                                </figcaption>
-                                            </figure>
-                                        </li>
-                                        <li>
-                                            <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_2.png" alt="設定自動啟動時間並儲存" class="img-fluid">
-                                                <figcaption class="caption">
-                                                    <p><strong>步驟 2：</strong>設定自動啟動的時間點，並儲存。</p>
-                                                    <p>若售票時間為 <strong>上午 11:00:00</strong> 開賣，請直接設置為 <strong>上午 11:00</strong>。</p>
-                                                    <p>系統會在剩餘約 5 秒時自動重新整理頁面，直至開賣並自動跳轉到選座位頁。</p>
-                                                    <p><strong>建議：</strong>若你人在電腦前，倒數剩 1 秒時可手動重新載入，以爭取刷新時機。</p>
-                                                </figcaption>
-                                            </figure>
-                                        </li>
-                                    </ol>
-                                </div>
+            <div
+              class="accordion mx-auto"
+              id="v3Guide"
+              style="max-width: 800px"
+            >
+              <div class="accordion-item shadow-sm">
+                <h2 class="accordion-header" id="v3-f1-h">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#v3-f1"
+                    aria-expanded="false"
+                    aria-controls="v3-f1"
+                  >
+                    <i class="bi bi-clock-history me-2"></i>
+                    步驟一：設定自動啟動時間與功能開關
+                  </button>
+                </h2>
+                <div
+                  id="v3-f1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#v3Guide"
+                  aria-labelledby="v3-f1-h"
+                >
+                  <div class="accordion-body">
+                    <ol class="tutorial-steps">
+                      <li>
+                        <span class="step-title">開啟輔助功能</span>
+                        <figure class="tutorial-fig">
+                          <img
+                            src="img/V3/V3_1.png"
+                            alt="在 V3 設定中開啟輔助功能"
+                            class="img-fluid"
+                          />
+                          <figcaption class="caption">
+                            請確保
+                            <strong>開啟輔助功能</strong>
+                            已勾選。若未勾選，將不會自動從 `/detail`
+                            頁面跳轉至購票頁 `/game`。
+                          </figcaption>
+                        </figure>
+                      </li>
+                      <li>
+                        <span class="step-title">設定自動啟動時間</span>
+                        <figure class="tutorial-fig">
+                          <img
+                            src="img/V3/V3_2.png"
+                            alt="設定自動啟動時間並儲存"
+                            class="img-fluid"
+                          />
+                          <figcaption class="caption">
+                            <p>
+                              設定自動啟動的時間點，並記得<strong>儲存</strong>。
+                            </p>
+                            <p>
+                              例如：若售票時間為
+                              <strong>上午 11:00:00</strong>，請直接設置為
+                              <strong>上午 11:00</strong> 即可。
+                            </p>
+                            <div
+                              class="alert alert-info py-2 small mb-0"
+                              role="alert"
+                            >
+                              <i class="bi bi-lightbulb-fill me-2"></i
+                              >系統將在剩餘約 5
+                              秒時自動重新整理，直至開賣並自動跳轉到選座位頁。
                             </div>
-                        </div>
-
-                        <!-- 功能 2：日期 / 場次名稱與節目場次 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="v3-f2-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f2" aria-expanded="false" aria-controls="v3-f2">日期 / 場次名稱與節目場次</button>
-                            </h2>
-                            <div id="v3-f2" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f2-h">
-                                <div class="accordion-body">
-                                    <ol class="tutorial-steps">
-                                        <li>
-                                            <div class="row pair-row">
-                                                <div class="col-12 col-md-4">
-                                                    <figure class="tutorial-fig m-0">
-                                                        <img src="img/V3/V3_3.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
-                                                    </figure>
-                                                </div>
-                                                <div class="col-12 col-md-8">
-                                                    <figure class="tutorial-fig m-0">
-                                                        <img src="img/V3/V3_4.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="mt-3">
-                                                <p><strong>步驟 3：</strong>選擇以「日期」或「場次名稱」為條件。</p>
-                                                <p><b>前提要件：</b>該場演唱會有三場以上的節目，無法使用「上到下」或「下到上」來做選擇時，才使用！<strong>若兩場內，請看下面「步驟4」即可。</strong></p>
-                                                <p>例如有三場以上，想要直接鎖定您想要的日期購票，日期輸入： <code>2025/09/27 (六) 12:00</code>即可。</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="row pair-row">
-                                                <div class="col-12 col-md-4">
-                                                    <figure class="tutorial-fig m-0">
-                                                        <img src="img/V3/V3_5.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
-                                                    </figure>
-                                                </div>
-                                                <div class="col-12 col-md-8">
-                                                    <figure class="tutorial-fig m-0">
-                                                        <img src="img/V3/V3_6.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="mt-3">
-                                                <p><strong>步驟 4：</strong>若兩場內，請直接選用「上到下」 或 「下到上」即可。</p>
-                                                <p>系統將自動定位並選取符合條件的節目場次，也會忽略「選購一空」。</p>
-                                            </div>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 功能 3：電腦選位（快速） / 自定義選位 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="v3-f3-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f3" aria-expanded="false" aria-controls="v3-f3">電腦選位（快速） / 自定義選位</button>
-                            </h2>
-                            <div id="v3-f3" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f3-h">
-                                <div class="accordion-body">
-                                    <ol class="tutorial-steps">
-                                        <li>
-                                            <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_7.png" alt="以日期或場次名稱為條件進行設定" class="img-fluid">
-                                                <figcaption class="caption">
-                                                    <p><strong>步驟 5：</strong>選擇以「電腦選位（快速）」或「自定義選位」。</p>
-                                                    <p><b>特別注意：</b>若您有「自定義選位」輔助插件將<strong>優先選擇您所自定義座位</strong>，接下來才會是跑「只求有票」當中，您所設定的。</p>
-                                                    <ol class="fs-6 mx-auto" style="max-width:760px;">
-                                                        <li>若您要選假設4300票價。請在精準選位輸入：4300（記得多加一個空白鍵）</li>
-                                                        <li>若您要4300裡面的「特B區」請在普通選位輸入：特B區（不用多一個空白鍵）</li>
-                                                        <li>若您是要一模一樣完整的「特B區4300」請在普通選位輸入：特B區4300（最前面以及最後面都不用空白鍵）</li>
-                                                    </ol>
-                                                </figcaption>
-                                            </figure>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 功能 4：選擇張數 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="v3-f4-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f4" aria-expanded="false" aria-controls="v3-f4">選擇張數</button>
-                            </h2>
-                            <div id="v3-f4" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f4-h">
-                                <div class="accordion-body">
-                                    <ol class="tutorial-steps">
-                                        <li>
-                                            <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_8.png" alt="選擇票券張數" class="img-fluid">
-                                                <figcaption class="caption">
-                                                    <p><strong>步驟 6：</strong>選擇自己所需的「票券張數」</p>
-                                                    <p class="mb-0"><b>特別注意：</b>注意售票系統的購票上限，不要超過嚕 ><</p>
-                                                </figcaption>
-                                            </figure>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 功能 5：驗證問題答案 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="v3-f5-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f5" aria-expanded="false" aria-controls="v3-f5">驗證問題答案</button>
-                            </h2>
-                            <div id="v3-f5" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f5-h">
-                                <div class="accordion-body">
-                                    <ol class="tutorial-steps">
-                                        <li>
-                                            <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_9.png" alt="事先輸入驗證問題" class="img-fluid">
-                                                <figcaption class="caption">
-                                                    <p class="mb-0"><strong>步驟 7：</strong>事先輸入售票系統的驗證問題「卡友」 / 「會員優先購號碼」</p>
-                                                </figcaption>
-                                            </figure>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 功能 6：猜驗證碼 / 送出 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="v3-f6-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f6" aria-expanded="false" aria-controls="v3-f6">猜驗證碼 / 送出</button>
-                            </h2>
-                            <div id="v3-f6" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f6-h">
-                                <div class="accordion-body">
-                                    <ol class="tutorial-steps">
-                                        <li>
-                                            <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_10.png" alt="猜驗證碼與自動送出" class="img-fluid">
-                                                <figcaption class="caption">
-                                                    <p><strong>步驟 7：</strong>可自行判斷是否需要使用「猜驗證碼」、「自動送出」功能！</p>
-                                                    <p class="mb-0"><b>特別注意：</b>（建議手動輸入驗證碼，限非台灣使用） ><</p>
-                                                </figcaption>
-                                            </figure>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 功能 7：刷釋出票 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="v3-f7-h">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#v3-f7" aria-expanded="false" aria-controls="v3-f7">刷釋出票</button>
-                            </h2>
-                            <div id="v3-f7" class="accordion-collapse collapse" data-bs-parent="#v3Guide" aria-labelledby="v3-f7-h">
-                                <div class="accordion-body">
-                                    <ol class="tutorial-steps">
-                                        <li>
-                                            <figure class="tutorial-fig">
-                                                <img src="img/V3/V3_11.png" alt="刷釋出票功能" class="img-fluid">
-                                                <figcaption class="caption">
-                                                    <p><strong>步驟 7：</strong>可自行判斷是否需要使用「刷釋出票」功能！</p>
-                                                    <p class="mb-0"><b>特別注意：</b>（建議設2-5秒區間，比較不會顯示403 error） ><</p>
-                                                </figcaption>
-                                            </figure>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ===== KKTIX 操作教學 ===== -->
-                <section class="mb-5">
-                    <h2 class="h4 fw-bold text-center mb-4">KKTIX 操作教學</h2>
-                    <div class="alert alert-warning text-center mb-0" role="alert">正在製作中…99%</div>
-                </section>
-
-                <!-- ===== 特別說明 ===== -->
-                <section class="mb-5">
-                    <h2 class="h4 fw-bold text-center mb-4">特別說明「使用KK輔助插件」</h2>
-                    <ol class="fs-6 mx-auto" style="max-width:760px;">
-                        <img src="img/kktix.png" class="img-fluid mb-3" alt="KKTIX 使用範例">
-                        <li>若您想要隨機選票價。<br>請不用輸入任何東西即可，只要輸入你要的張數即可。</li><br>
-                        <li>若您要選假設$1200票價。<br>請在「鎖定想要的票價 / 區域 / 座位（擇一即可）」輸入：TWD$1,200 優先順序: 1</li><br>
-                        <li>若您要選$1200票價裡面的「VIP單日票10/25」<br>請在直接輸入：VIP單日票10/25 優先順序: 1</li><br>
-                        <li>若您要選$1200票價裡面的VIP單日票10/25裡面的「10/25 3F VIP」<br>請在直接輸入：10/25 3F VIP 優先順序: 1</li><br>
-                        <li>若您要選「圖片上這三個票價都要」請分別設定優先順序。<br>請在直接輸入：TWD$800 優先順序: 1<br>10/24 3F VIP 優先順序: 2<br>10/25 3F VIP 優先順序: 3</li><br>
-                        <p style="color: red;">《請依照 票價最為優先 > 票種 > 區域，預祝各位能夠購買自己理想票券。》</p>
+                          </figcaption>
+                        </figure>
+                      </li>
                     </ol>
-                </section>
+                  </div>
+                </div>
+              </div>
 
+              <div class="accordion-item shadow-sm">
+                <h2 class="accordion-header" id="v3-f2-h">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#v3-f2"
+                    aria-expanded="false"
+                    aria-controls="v3-f2"
+                  >
+                    <i class="bi bi-calendar-check me-2"></i>
+                    步驟二：精準鎖定場次（日期/名稱）
+                  </button>
+                </h2>
+                <div
+                  id="v3-f2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#v3Guide"
+                  aria-labelledby="v3-f2-h"
+                >
+                  <div class="accordion-body">
+                    <ol class="tutorial-steps">
+                      <li>
+                        <span class="step-title"
+                          >選擇日期或場次名稱（三場以上時使用）</span
+                        >
+                        <div class="row pair-row align-items-center">
+                          <div class="col-12 col-md-6">
+                            <figure class="tutorial-fig m-0">
+                              <img
+                                src="img/V3/V3_3.png"
+                                alt="以日期或場次名稱為條件進行設定"
+                                class="img-fluid"
+                              />
+                            </figure>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <figure class="tutorial-fig m-0">
+                              <img
+                                src="img/V3/V3_4.png"
+                                alt="以日期或場次名稱為條件進行設定"
+                                class="img-fluid"
+                              />
+                            </figure>
+                          </div>
+                        </div>
+                        <p class="mt-3">
+                          此功能用於演唱會<strong>有三場以上節目</strong>時，您可選擇以「<strong>日期</strong>」或「<strong>場次名稱</strong>」為條件，直接鎖定想要的場次購票。
+                        </p>
+                        <p>
+                          例如有三場以上，想要直接鎖定您想要的日期購票，日期輸入：
+                          <code>2025/09/27 (六) 12:00</code>即可。
+                        </p>
+                      </li>
+                      <li>
+                        <span class="step-title"
+                          >快速選擇場次（兩場內時使用）</span
+                        >
+                        <div class="row pair-row align-items-center">
+                          <div class="col-12 col-md-6">
+                            <figure class="tutorial-fig m-0">
+                              <img
+                                src="img/V3/V3_5.png"
+                                alt="以日期或場次名稱為條件進行設定"
+                                class="img-fluid"
+                              />
+                            </figure>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <figure class="tutorial-fig m-0">
+                              <img
+                                src="img/V3/V3_6.png"
+                                alt="以日期或場次名稱為條件進行設定"
+                                class="img-fluid"
+                              />
+                            </figure>
+                          </div>
+                        </div>
+                        <p class="mt-3">
+                          若只有<strong>兩場節目或以下</strong>，請直接選用「<strong>上到下</strong>」或「<strong>下到上</strong>」即可，系統將自動定位並選取<strong>未售罄</strong>的場次。
+                        </p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item shadow-sm">
+                <h2 class="accordion-header" id="v3-f3-h">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#v3-f3"
+                    aria-expanded="false"
+                    aria-controls="v3-f3"
+                  >
+                    <i class="bi bi-cursor-fill me-2"></i>
+                    步驟三：選擇票價與區域（自定義選位）
+                  </button>
+                </h2>
+                <div
+                  id="v3-f3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#v3Guide"
+                  aria-labelledby="v3-f3-h"
+                >
+                  <div class="accordion-body">
+                    <ol class="tutorial-steps">
+                      <li>
+                        <span class="step-title">選擇選位模式</span>
+                        <figure class="tutorial-fig">
+                          <img
+                            src="img/V3/V3_7.png"
+                            alt="選擇電腦選位或自定義選位"
+                            class="img-fluid"
+                          />
+                          <figcaption class="caption">
+                            <p>
+                              選擇以「<strong>電腦選位（只求有票）</strong>」或「<strong>自定義選位（精準鎖定）</strong>」。
+                            </p>
+                            <div
+                              class="alert alert-vip py-2 small mb-0"
+                              role="alert"
+                            >
+                              <i class="bi bi-diamond-fill me-2"></i
+                              ><strong>特別注意：</strong
+                              >若您開啟「自定義選位」，輔助插件將<strong>優先選擇您所設定的精準區域</strong>。
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </li>
+                      <li>
+                        <span class="step-title">自定義選位輸入格式</span>
+                        <ul class="list-unstyled ps-4">
+                          <li class="mb-2">
+                            <strong>A. 鎖定票價：</strong>
+                            <p class="small text-muted">
+                              若您要選假設4300票價。請在精準選位輸入：<code
+                                >4300 </code
+                              >（記得多加一個空白鍵）
+                            </p>
+                          </li>
+                          <li class="mb-2">
+                            <strong>B. 鎖定區域（模糊）：</strong>
+                            <p class="small text-muted">
+                              若您要4300裡面的「特B區」。請在普通選位輸入：<code>特B區</code>（不用多一個空白鍵）
+                            </p>
+                          </li>
+                          <li class="mb-2">
+                            <strong>C. 鎖定區域+票價（完整）：</strong>
+                            <p class="small text-muted">
+                              若您是要一模一樣完整的「特B區4300」。請在普通選位輸入：<code>特B區4300</code>（最前面以及最後面都不用空白鍵）
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item shadow-sm">
+                <h2 class="accordion-header" id="v3-f4-h">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#v3-f4"
+                    aria-expanded="false"
+                    aria-controls="v3-f4"
+                  >
+                    <i class="bi bi-ticket-fill me-2"></i> 步驟四：選擇票券張數
+                  </button>
+                </h2>
+                <div
+                  id="v3-f4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#v3Guide"
+                  aria-labelledby="v3-f4-h"
+                >
+                  <div class="accordion-body">
+                    <ol class="tutorial-steps">
+                      <li>
+                        <span class="step-title">設定所需張數</span>
+                        <figure class="tutorial-fig">
+                          <img
+                            src="img/V3/V3_8.png"
+                            alt="選擇票券張數"
+                            class="img-fluid"
+                          />
+                          <figcaption class="caption">
+                            <p>選擇自己所需的「<strong>票券張數</strong>」</p>
+                            <div
+                              class="alert alert-warning py-2 small mb-0"
+                              role="alert"
+                            >
+                              <i
+                                class="bi bi-exclamation-triangle-fill me-2"
+                              ></i
+                              ><strong>提醒：</strong
+                              >請務必注意售票系統的<strong>購票上限</strong>，不要超過上限喔！
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item shadow-sm">
+                <h2 class="accordion-header" id="v3-f567-h">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#v3-f567"
+                    aria-expanded="false"
+                    aria-controls="v3-f567"
+                  >
+                    <i class="bi bi-terminal-fill me-2"></i>
+                    步驟五：驗證、送出與刷票設定
+                  </button>
+                </h2>
+                <div
+                  id="v3-f567"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#v3Guide"
+                  aria-labelledby="v3-f567-h"
+                >
+                  <div class="accordion-body">
+                    <ol class="tutorial-steps">
+                      <li>
+                        <span class="step-title">會員驗證問題答案</span>
+                        <figure class="tutorial-fig">
+                          <img
+                            src="img/V3/V3_9.png"
+                            alt="事先輸入驗證問題"
+                            class="img-fluid"
+                          />
+                          <figcaption class="caption">
+                            <p>
+                              事先輸入售票系統的驗證問題（如：<strong
+                                >卡友號碼</strong
+                              >
+                              / <strong>會員優先購號碼</strong>）
+                            </p>
+                          </figcaption>
+                        </figure>
+                      </li>
+                      <li>
+                        <span class="step-title">猜驗證碼 / 自動送出</span>
+                        <figure class="tutorial-fig">
+                          <img
+                            src="img/V3/V3_10.png"
+                            alt="猜驗證碼與自動送出"
+                            class="img-fluid"
+                          />
+                          <figcaption class="caption">
+                            <p>
+                              可自行判斷是否需要使用「<strong>猜驗證碼</strong>」、「<strong>自動送出</strong>」功能！
+                            </p>
+                            <div
+                              class="alert alert-danger py-2 small mb-0"
+                              role="alert"
+                            >
+                              <i class="bi bi-globe me-2"></i
+                              ><strong>特別注意：</strong
+                              >（建議手動輸入驗證碼，限非台灣使用）
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </li>
+                      <li>
+                        <span class="step-title">刷釋出票設定</span>
+                        <figure class="tutorial-fig">
+                          <img
+                            src="img/V3/V3_11.png"
+                            alt="刷釋出票功能"
+                            class="img-fluid"
+                          />
+                          <figcaption class="caption">
+                            <p>
+                              可自行判斷是否需要使用「<strong>刷釋出票</strong>」功能！
+                            </p>
+                            <div
+                              class="alert alert-info py-2 small mb-0"
+                              role="alert"
+                            >
+                              <i class="bi bi-arrow-repeat me-2"></i
+                              ><strong>建議：</strong>（建議設 2-5
+                              秒區間，比較不會顯示 403 error）
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-5 mx-auto" style="max-width: 800px">
+            <h2 class="h4 fw-bold text-center mb-4">
+              <i class="bi bi-box-fill me-2"></i>KKTIX 插件操作教學
+            </h2>
+
+            <div
+              class="alert alert-warning text-center mb-4 mx-auto"
+              role="alert"
+            >
+              <i class="bi bi-code-slash me-2"></i
+              ><strong>KKTIX 版本教學</strong> 仍在製作優化中，即將推出！
             </div>
 
-        </section>
+            <div class="card shadow-sm p-4 border-0">
+              <h3 class="h5 fw-bold mb-3 portal-header">
+                特別說明：「鎖定票價 / 區域」
+              </h3>
+              <img
+                src="img/kktix.png"
+                class="img-fluid mb-4 rounded shadow-sm"
+                alt="KKTIX 使用範例"
+              />
+              <ol class="kktix-list">
+                <li>
+                  若您想要<strong>隨機選票價</strong>：
+                  <p class="small text-muted">
+                    請不用輸入任何東西，只要輸入<strong>你要的張數</strong>即可。
+                  </p>
+                </li>
+                <li>
+                  若您要選假設 <strong>$1200 票價</strong>：
+                  <p class="small text-muted">
+                    請在「鎖定想要的票價 / 區域 / 座位（擇一即可）」輸入：<code
+                      >TWD$1,200 優先順序: 1</code
+                    >
+                  </p>
+                </li>
+                <li>
+                  若您要選 $1200 票價裡面的「<strong>VIP單日票10/25</strong>」：
+                  <p class="small text-muted">
+                    請直接輸入：<code>VIP單日票10/25 優先順序: 1</code>
+                  </p>
+                </li>
+                <li>
+                  若您要選 $1200 票價裡面的 VIP單日票10/25 裡面的「<strong
+                    >10/25 3F VIP</strong
+                  >」：
+                  <p class="small text-muted">
+                    請直接輸入：<code>10/25 3F VIP 優先順序: 1</code>
+                  </p>
+                </li>
+                <li>
+                  若您要選「<strong>圖片上這三個票價都要</strong>」：
+                  <p class="small text-muted">
+                    請分別設定優先順序：<br />
+                    <code>TWD$800 優先順序: 1</code><br />
+                    <code>10/24 3F VIP 優先順序: 2</code><br />
+                    <code>10/25 3F VIP 優先順序: 3</code>
+                  </p>
+                </li>
+              </ol>
+              <div class="alert alert-error text-center mt-3" role="alert">
+                <i class="bi bi-lightning-fill me-2"></i
+                ><strong>請依照：</strong
+                ><strong class="text-danger">票價最為優先 > 票種 > 區域</strong>
+                的邏輯進行設定！
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </main>
 
-    <!-- Back-to-top -->
-    <div id="backToTop" role="button" aria-label="Back to top"><i class="bi bi-chevron-up fs-4"></i></div>
+    <div id="backToTop" role="button" aria-label="Back to top">
+      <i class="bi bi-chevron-up"></i>
+    </div>
 
-    <!-- Footer -->
-    <footer class="py-4 bg-light text-center border-top mt-auto">
-        <div class="container small text-muted">
-            © 2025 票速通 ‧ TixCraft 購票輔助 |
-            <a href="https://github.com" target="_blank" class="text-decoration-none">GitHub</a> ·
-            <a href="https://discord.com" target="_blank" class="text-decoration-none">Discord</a>
-        </div>
+    <footer class="py-4 text-center mt-auto">
+      <div class="container small text-muted">
+        © 2025 票速通 ‧ TixCraft/KKTIX 購票輔助 |
+        <a
+          href="https://github.com"
+          target="_blank"
+          class="text-decoration-none"
+          >GitHub</a
+        >
+        ·
+        <a
+          href="https://discord.com"
+          target="_blank"
+          class="text-decoration-none"
+          >Discord</a
+        >
+      </div>
     </footer>
 
-    <!-- 依序載入 Bootstrap JS、CryptoJS 與自訂腳本 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js"></script>
-    <script src="js/portal.js"></script>
-</body>
 
+    <script src="js/portal.js"></script>
+  </body>
 </html>

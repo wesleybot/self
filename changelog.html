@@ -1,203 +1,396 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>票速通｜更新日誌</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>票速通｜更新日誌</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="icon" href="icon/icon_128.png" type="image/png" />
-
-  <style>
-    :root{--primary:#0066cc;}
-    html{height:100%;}
-    body{
-      min-height:100vh;display:flex;flex-direction:column;
-      padding-top:64px;background:#f8f9fa;scroll-behavior:smooth;
-    }
-    #backToTop{position:fixed;bottom:40px;right:32px;width:48px;height:48px;
-      border-radius:50%;background:var(--primary);color:#fff;
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:0 3px 6px rgba(0,0,0,.2);opacity:0;visibility:hidden;
-      transition:opacity .3s ease,visibility .3s ease;z-index:1030;cursor:pointer;}
-    #backToTop.show{opacity:1;visibility:visible;}
-  </style>
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">票速通</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
-          <li class="nav-item"><a class="nav-link active" href="changelog.html">更新日誌</a></li>
-          <li class="nav-item"><a class="nav-link" href="merch.html">周邊商品</a></li>
-          <li class="nav-item"><a class="nav-link" href="disclaimer.html">免責聲明</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">聯絡我們</a></li>
-          <li class="nav-item"><a class="nav-link" href="portal.html">會員專區</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ---------- 主要內容 ---------- -->
-  <main class="flex-grow-1">
-    <section class="container py-5">
-      <h1 class="h3 fw-bold text-center mb-5">版本更新日誌</h1>
-      <div class="list-group mx-auto" style="max-width:820px;">
-        <!-- ---------- 以下為更新日誌 ---------- -->
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.15結轉1.0.1</span>
-          <div>
-            <h6 class="mb-0">更改擴充商店，提升流暢測試中</h6>
-            <small class="text-muted">2025-08-24</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.14</span>
-          <div>
-            <h6 class="mb-0">更改介面UI樣式舒適度</h6>
-            <small class="text-muted">2025-08-10</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.13</span>
-          <div>
-            <h6 class="mb-0">優化程式流暢度。<br>新增功能：點擊彈出視窗、若無勾選「啟動輔助程式」將不會自動跳轉/game</br></h6>
-            <small class="text-muted">2025-08-08</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.12</span>
-          <div>
-            <h6 class="mb-0">優化倒數計時功能、優化程式流暢度。</h6>
-            <small class="text-muted">2025-07-30</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.11</span>
-          <div>
-            <h6 class="mb-0">緊急優化拓元：有回饋變慢，已優化。</h6>
-            <small class="text-muted">2025-07-29</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.10</span>
-          <div>
-            <h6 class="mb-0">KK更新優化「驗證問題答案」新增可題目問答。<br>之前是會員碼（例：GD、周興哲...）</h6>
-            <small class="text-muted">2025-07-28</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.9</span>
-          <div>
-            <h6 class="mb-0">緊急修復：Tix勾選同意條款更改元素，已修正。<br>KK新增票價順序功能：可設定優先順序。</h6>
-            <small class="text-muted">2025-07-28</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.8</span>
-          <div>
-            <h6 class="mb-0">KK新增功能：可輸入會員碼。<br>Tix優化流暢問題。</h6>
-            <small class="text-muted">2025-07-23</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.7</span>
-          <div>
-            <h6 class="mb-0">緊急修復：有反應無論是否勾選「 啟動輔助程式」卻都還是會執行。關於此問題，已解決。</h6>
-            <small class="text-muted">2025-07-22</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.6</span>
-          <div>
-            <h6 class="mb-0">緊急修復，強制開啟隱蔽身障區等...</h6>
-            <small class="text-muted">2025-07-22</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.5</span>
-          <div>
-            <h6 class="mb-0">KK上線成功</h6>
-            <small class="text-muted">2025-07-21</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.4</span>
-          <div>
-            <h6 class="mb-0">修正場次選擇「由上到下」只會選擇最下面，已修正。</h6>
-            <small class="text-muted">2025-07-20</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.2</span>
-          <div>
-            <h6 class="mb-0">新增猜驗證碼相關規定，各位使用請特別注意地區。</h6>
-            <small class="text-muted">2025-07-08</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.1</span>
-          <div>
-            <h6 class="mb-0">新增免責聲明頁 · 程式碼優化</h6>
-            <small class="text-muted">2025-06-30</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v3.0.0</span>
-          <div>
-            <h6 class="mb-0">自動點位 + 全新 UI</h6>
-            <small class="text-muted">2025-06-25</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v2.0.2</span>
-          <div>
-            <h6 class="mb-0">加入預定重啟、功能優化</h6>
-            <small class="text-muted">2025-06-21</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v2.0.1</span>
-          <div>
-            <h6 class="mb-0">修復顯示票價問題</h6>
-            <small class="text-muted">2025-06-20</small>
-          </div>
-        </div>
-        <div class="list-group-item d-flex gap-3">
-          <span class="badge bg-secondary align-self-center">v2.0.0</span>
-          <div>
-            <h6 class="mb-0">首次公開釋出</h6>
-            <small class="text-muted">2025-06-15</small>
-          </div>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="icon/icon_128.png" type="image/png" />
+    <link rel="stylesheet" href="css/logstyless.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-glass fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-ticket-perforated-fill me-2"></i>票速通
+        </a>
+        <button
+          class="navbar-toggler navbar-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="changelog.html">更新日誌</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="merch.html">周邊商品</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="disclaimer.html">免責聲明</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">聯絡我們</a>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a
+                class="btn btn-outline-light btn-sm rounded-pill px-3"
+                href="portal.html"
+                >會員專區</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-  </main>
+    </nav>
 
-  <!-- Back-to-top -->
-  <div id="backToTop" role="button" aria-label="Back to top"><i class="bi bi-chevron-up fs-4"></i></div>
+    <main class="flex-grow-1">
+      <section class="container py-5">
+        <h1 class="h3 fw-bold text-center mb-2">🚀 版本更新日誌</h1>
+        <p class="text-muted text-center mb-5">
+          追蹤票速通的最新功能、優化與修復紀錄
+        </p>
 
-  <!-- Footer -->
-  <footer class="py-4 bg-light text-center border-top mt-auto">
-    <div class="container small text-muted">
-      © 2025 票速通 ‧ TixCraft 購票輔助 |
-      <a href="https://github.com" target="_blank" class="text-decoration-none">GitHub</a> ·
-      <a href="https://discord.com" target="_blank" class="text-decoration-none">Discord</a>
+        <div class="mx-auto timeline" style="max-width: 820px">
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.15<br />結轉 1.0.1</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">
+                重大更新：商店系統調整與流暢度提升
+              </h6>
+              <p>
+                更改擴充商店架構，並進行流暢性測試與優化，為下一個階段做好準備。
+              </p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-08-24</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.14</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">介面 UI 舒適度提升</h6>
+              <p>針對多項介面元素進行微調，提供更佳的視覺舒適度。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-08-10</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.13</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">流暢度優化 & 新功能</h6>
+              <p>
+                優化程式碼，整體流暢度提升。<br />新增功能：點擊彈出視窗功能；若未勾選「啟動輔助程式」將不會自動跳轉至
+                /game 頁面。
+              </p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-08-08</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.12</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">倒數計時與流暢度優化</h6>
+              <p>優化倒數計時功能，確保時間精準度；持續優化程式碼流暢度。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-30</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.11</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">緊急修復：拓元回饋變慢問題</h6>
+              <p>針對拓元系統反應變慢的回饋，已進行緊急優化處理。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-29</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.10</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">KK Tix：新增問題驗證答案輸入</h6>
+              <p>
+                KK系統更新優化「驗證問題答案」機制，現可支援輸入多種題目的問答，不再僅限會員碼（如
+                GD、周興哲...）。
+              </p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-28</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.9</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">緊急修復與 KK Tix 新增功能</h6>
+              <p>
+                緊急修復：Tix 勾選同意條款的元素變更，已同步修正。<br />KK Tix
+                新增票價順序功能：可設定多個票價的優先順序。
+              </p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-28</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.8</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">
+                KK Tix 會員碼功能與 Tix 流暢度優化
+              </h6>
+              <p>
+                KK Tix 新增功能：可輸入會員碼。<br />TixCraft
+                系統優化流暢度問題。
+              </p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-23</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.7</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">緊急修復：輔助程式啟動邏輯問題</h6>
+              <p>
+                緊急修復：無論是否勾選「啟動輔助程式」都會執行的錯誤邏輯，現已修正。
+              </p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-22</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.6</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">緊急修復：身障區隱蔽問題</h6>
+              <p>緊急修復：強制開啟隱蔽身障區等相關設定。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-22</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.5</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">KK Tix 成功上線</h6>
+              <p>正式支援 KK Tix 售票系統。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-21</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.4</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">場次選擇修正</h6>
+              <p>修正場次選擇「由上到下」時，只會選擇最下面的問題。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-20</small
+              >
+            </div>
+          </div>
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.2</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">驗證碼規定新增</h6>
+              <p>新增猜驗證碼相關規定，請各位用戶特別注意使用地區限制。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-07-08</small
+              >
+            </div>
+          </div>
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.1</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">新增免責聲明頁 · 程式碼優化</h6>
+              <p>新增「免責聲明」頁面；進行核心程式碼優化，提升穩定性。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-06-30</small
+              >
+            </div>
+          </div>
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v3.0.0</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">
+                🎉 V3.0.0 大改版：自動點位 + 全新 UI
+              </h6>
+              <p>重大更新：釋出自動點位功能並導入全新的使用者介面（UI）。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-06-25</small
+              >
+            </div>
+          </div>
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v2.0.2</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">預定重啟與功能優化</h6>
+              <p>加入預定重啟功能；多項核心功能優化。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-06-21</small
+              >
+            </div>
+          </div>
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v2.0.1</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">修復顯示票價問題</h6>
+              <p>修復在特定情況下票價顯示不正確的問題。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-06-20</small
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item d-flex flex-column flex-md-row gap-3">
+            <span
+              class="badge badge-gradient align-self-start text-center"
+              style="min-width: 140px"
+              >v2.0.0</span
+            >
+            <div class="version-desc">
+              <h6 class="mb-1 text-white">✨ 首次公開釋出</h6>
+              <p>票速通系統首次公開上線。</p>
+              <small class="text-muted"
+                ><i class="bi bi-calendar-event me-1"></i> 2025-06-15</small
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="backToTop" role="button" aria-label="Back to top">
+      <i class="bi bi-chevron-up"></i>
     </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const btn=document.getElementById('backToTop');
-    window.addEventListener('scroll',()=>window.scrollY>400?btn.classList.add('show'):btn.classList.remove('show'));
-    btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-  </script>
-</body>
+    <footer class="py-4 text-center mt-auto">
+      <div class="container small text-muted">
+        © 2025 票速通 ‧ TixCraft/KKTIX 購票輔助 |
+        <a
+          href="https://www.instagram.com/airticket._/"
+          target="_blank"
+          class="text-decoration-none"
+          >Instagram</a
+        >
+        ·
+        <a
+          href="https://www.threads.com/@airticket._"
+          target="_blank"
+          class="text-decoration-none"
+          >Threads</a
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const btn = document.getElementById("backToTop");
+      window.addEventListener("scroll", () =>
+        window.scrollY > 400
+          ? btn.classList.add("show")
+          : btn.classList.remove("show")
+      );
+      btn.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      );
+    </script>
+  </body>
 </html>

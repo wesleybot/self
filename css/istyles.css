@@ -1,0 +1,196 @@
+/* ----- 變數設定：賽博霓虹配色 ----- */
+:root {
+  --bg-dark: #0f172a; /* 深藍黑背景 */
+  --bg-card: #1e293b; /* 卡片深色 */
+  --text-main: #f8fafc; /* 主要文字白 */
+  --text-sub: #94a3b8; /* 次要文字灰 */
+
+  /* 漸層主色調：紫羅蘭 -> 亮青色 */
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  --accent-color: #06b6d4;
+}
+
+/* ----- 全域設定 ----- */
+html {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px; /* offset for navbar */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+}
+
+/* 覆蓋 Bootstrap 預設文字顏色 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.text-muted {
+  color: var(--text-sub) !important;
+}
+.lead {
+  color: #e2e8f0;
+}
+
+/* ----- Navbar 毛玻璃效果 ----- */
+.navbar-glass {
+  background: rgba(15, 23, 42, 0.85); /* 半透明深色 */
+  backdrop-filter: blur(12px); /* 毛玻璃模糊 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navbar-brand {
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* 文字漸層 */
+  font-size: 1.5rem;
+}
+.nav-link {
+  color: #cbd5e1 !important;
+  transition: color 0.3s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color) !important;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+/* ----- Hero Section ----- */
+.hero-section {
+  position: relative;
+  padding: 6rem 0;
+  background: radial-gradient(
+    circle at top center,
+    rgba(139, 92, 246, 0.15),
+    transparent 70%
+  );
+  overflow: hidden;
+}
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fff, #cbd5e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* 漸層按鈕 */
+.btn-gradient {
+  background: var(--gradient-primary);
+  border: none;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.5);
+  color: #fff;
+}
+
+/* ----- Cards & Sections ----- */
+section {
+  padding: 5rem 0;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Icon Circle */
+.icon-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  transition: 0.3s;
+}
+.feature-card:hover .icon-box {
+  background: var(--gradient-primary);
+  color: #fff;
+  transform: rotate(10deg);
+}
+
+/* List Group Override */
+.list-group-item {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-sub);
+  padding: 1rem 1.25rem;
+}
+.list-group-item strong {
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: #020617;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+footer a {
+  color: var(--text-sub);
+  transition: 0.3s;
+}
+footer a:hover {
+  color: var(--accent-color);
+}
+
+/* Back to top */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+  cursor: pointer;
+}
+#backToTop:hover {
+  background: var(--gradient-primary);
+  color: #fff;
+  border-color: transparent;
+}
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}

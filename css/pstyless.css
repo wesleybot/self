@@ -1,0 +1,248 @@
+/* ----- 變數設定：VIP 尊爵風 (以白色背景為主) ----- */
+:root {
+  --bg-dark: #0f172a; /* 深藍黑 (Navbar, Footer) */
+  --bg-card: #ffffff; /* 頁面主要內容 (白色) */
+  --text-main: #212529; /* 主要文字黑 */
+  --text-sub: #6c757d; /* 次要文字灰 */
+
+  /* 漸層主色調：紫羅蘭 -> 亮青色 */
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  --accent-color: #06b6d4; /* 青色 (連結) */
+  --highlight-color: #8b5cf6; /* 紫色 (VIP 強調色) */
+}
+
+/* ----- 全域設定與暗色組件繼承 ----- */
+html {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8fafc; /* 淺灰白背景 (你的需求: 較淺的底色) */
+  color: var(--text-main);
+  scroll-behavior: smooth;
+}
+/* 調整手機上方間距，避免被 fixed-top navbar 蓋住 */
+@media (max-width: 991.98px) {
+  /* <-- 這裡已移除多餘的 's' */
+  body {
+    padding-top: 56px;
+  }
+}
+
+/* 覆蓋 Bootstrap 預設顏色 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-main);
+  font-weight: 700;
+}
+.text-muted {
+  color: var(--text-sub) !important;
+}
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--highlight-color);
+}
+
+/* 導覽列與頁尾：沿用暗黑風格 */
+.navbar-glass {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navbar-brand {
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+}
+.nav-link {
+  color: #cbd5e1 !important;
+  transition: color 0.3s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color) !important;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+footer {
+  background: var(--bg-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-sub);
+}
+footer a {
+  color: var(--text-sub);
+  transition: 0.3s;
+}
+footer a:hover {
+  color: var(--accent-color);
+}
+
+/* Back to top (與你的 JS 搭配) */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--highlight-color); /* 改為紫色，更 VIP */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+}
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ----- 會員專區特有樣式 (更 VIP、人性化) ----- */
+.portal-header {
+  color: var(--highlight-color);
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+/* 教學步驟樣式 */
+.tutorial-steps {
+  padding-left: 1rem;
+  list-style-type: none;
+}
+.tutorial-steps li {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+.tutorial-steps li::before {
+  content: counter(step-counter);
+  counter-increment: step-counter;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--highlight-color);
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+}
+.tutorial-steps .step-title {
+  font-weight: 700;
+  color: var(--highlight-color);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* 教學圖片區塊 */
+.tutorial-fig {
+  margin: 1rem 0;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+}
+.tutorial-fig img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+.tutorial-fig .caption {
+  margin-top: 0.75rem;
+  padding: 0 0.5rem;
+  color: var(--text-main);
+}
+.tutorial-fig .caption p {
+  margin-bottom: 0.5rem;
+}
+.pair-row {
+  row-gap: 1rem;
+} /* 讓成對示意圖在手機堆疊 */
+
+/* 手風琴 (Accordion) - VIP 強調色 */
+.accordion-button {
+  white-space: normal;
+} /* 確保手風琴標題可換行 */
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: var(--highlight-color);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125),
+    0 0 10px rgba(139, 92, 246, 0.5);
+}
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
+}
+.accordion-body {
+  counter-reset: step-counter;
+}
+
+/* 警告框強調 */
+.alert-vip {
+  color: #8b5cf6;
+  background-color: #f3f0ff;
+  border-color: #8b5cf6;
+  font-weight: 600;
+}
+.alert-error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  font-weight: 600;
+}
+.alert-info {
+  /* 針對原本的 info 調整，更人性化 */
+  color: #0d6efd;
+  background-color: #e9f5ff;
+  border-color: #b9d7ff;
+}
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+/* KKTIX 教學的清單 */
+.kktix-list {
+  padding-left: 1rem;
+}
+.kktix-list li {
+  margin-bottom: 1rem;
+  list-style-type: decimal;
+}
+.kktix-list li strong {
+  color: var(--highlight-color);
+}
+.kktix-list p {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* 調整手機上方間距，避免被 fixed-top navbar 蓋住 */
+@media (max-width: 991.98px) {
+  s body {
+    padding-top: 56px;
+  }
+}

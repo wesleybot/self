@@ -1,155 +1,29 @@
-/* ----- 變數設定：賽博霓虹配色 (與首頁一致) ----- */
-:root {
-  --bg-dark: #0f172a; /* 深藍黑背景 */
-  --bg-card: #1e293b; /* 卡片深色 */
-  --text-main: #f8fafc; /* 主要文字白 */
-  --text-sub: #94a3b8; /* 次要文字灰 */
+/** @file mstyless.css
 
-  /* 漸層主色調：紫羅蘭 -> 亮青色 */
-  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
-  --accent-color: #06b6d4;
-}
+                   _oo0oo_
+                  o8888888o
+                  88" . "88
+                  (| -_- |)
+                  0\  =  /0
+                ___/`---'\___
+              .' \\|     |// '.
+             / \\|||  :  |||// \
+            / _||||| -:- |||||- \
+           |   | \\\  -  /// |   |
+           | \_|  ''\---/''  |_/ |
+           \  .-\__  '-'  ___/-. /
+         ___'. .'  /--.--\  `. .'___
+      ."" '<  `.___\_<|>_/___.' >' "".
+     | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+     \  \ `_.   \_ __\ /__ _/   .-` /  /
+ =====`-.____`.___ \_____/___.-`___.-'=====
+                   `=---='
 
-/* ----- 全域設定 ----- */
-html {
-  height: 100%;
-}
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding-top: 70px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  scroll-behavior: smooth;
-}
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-/* 覆蓋 Bootstrap 預設顏色 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #fff;
-  font-weight: 700;
-}
-.text-muted {
-  color: var(--text-sub) !important;
-}
+           佛祖保佑         永無 BUG
 
-/* ----- Navbar 毛玻璃效果 (與首頁一致) ----- */
-.navbar-glass {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.navbar-brand {
-  font-weight: 800;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.5rem;
-}
-.nav-link {
-  color: #cbd5e1 !important;
-  transition: color 0.3s;
-}
-.nav-link:hover,
-.nav-link.active {
-  color: var(--accent-color) !important;
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
-}
+ *  @author X!aN
+ *  @date 2025/11/24 */
 
-/* ----- Footer (與首頁一致) ----- */
-footer {
-  background: #020617;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-footer a {
-  color: var(--text-sub);
-  transition: 0.3s;
-}
-footer a:hover {
-  color: var(--accent-color);
-}
-
-/* ----- 商品卡片樣式 (Merch Cards) ----- */
-.merch-card {
-  background-color: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 1rem;
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-  overflow: hidden;
-  /* 讓圖片佔位符也呈現暗黑風格 */
-}
-.merch-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(139, 92, 246, 0.5); /* 霓虹光暈 */
-  border-color: var(--accent-color);
-}
-
-.merch-card .card-img-top {
-  filter: brightness(0.7) grayscale(0.2); /* 讓佔位圖與暗色主題更搭 */
-  transition: filter 0.3s;
-}
-.merch-card:hover .card-img-top {
-  filter: brightness(0.9) grayscale(0);
-}
-
-.card-body {
-  padding: 1.5rem;
-}
-
-/* 警告訊息 (Alert) 樣式覆蓋 */
-.alert-custom {
-  background: rgba(139, 92, 246, 0.1); /* 紫色透明背景 */
-  color: #8b5cf6; /* 紫色文字 */
-  border: 1px solid #8b5cf6;
-  border-radius: 0.75rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 1.25rem;
-}
-
-/* 禁用按鈕樣式 */
-.btn-disabled-custom {
-  background: var(--bg-dark);
-  color: var(--text-sub);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  cursor: not-allowed;
-  pointer-events: none;
-  transition: none;
-}
-
-/* Back to top (與首頁一致) */
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--accent-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  z-index: 1000;
-  cursor: pointer;
-}
-#backToTop:hover {
-  background: var(--gradient-primary);
-  color: #fff;
-  border-color: transparent;
-}
-#backToTop.show {
-  opacity: 1;
-  visibility: visible;
-}
+:root{--bg-dark:#0f172a;--bg-card:#1e293b;--text-main:#f8fafc;--text-sub:#94a3b8;--gradient-primary:linear-gradient(135deg,#8b5cf6 0%,#06b6d4 100%);--accent-color:#06b6d4}html{height:100%}body{min-height:100vh;display:flex;flex-direction:column;padding-top:70px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background-color:var(--bg-dark);color:var(--text-main);scroll-behavior:smooth}h1,h2,h3,h4,h5,h6{color:#fff;font-weight:700}.text-muted{color:var(--text-sub)!important}.navbar-glass{background:rgba(15,23,42,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.1)}.navbar-brand{font-weight:800;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:1.5rem}.nav-link{color:#cbd5e1!important;transition:color 0.3s}.nav-link:hover,.nav-link.active{color:var(--accent-color)!important;text-shadow:0 0 10px rgba(6,182,212,0.4)}footer{background:#020617;border-top:1px solid rgba(255,255,255,0.05)}footer a{color:var(--text-sub);transition:0.3s}footer a:hover{color:var(--accent-color)}.merch-card{background-color:var(--bg-card);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;overflow:hidden}.merch-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,0.4),0 0 15px rgba(139,92,246,0.5);border-color:var(--accent-color)}.merch-card.card-img-top{filter:brightness(0.7)grayscale(0.2);transition:filter 0.3s}.merch-card:hover.card-img-top{filter:brightness(0.9)grayscale(0)}.card-body{padding:1.5rem}.alert-custom{background:rgba(139,92,246,0.1);color:#8b5cf6;border:1px solid#8b5cf6;border-radius:0.75rem;font-size:1.1rem;font-weight:500;padding:1.25rem}.btn-disabled-custom{background:var(--bg-dark);color:var(--text-sub);border:1px solid rgba(255,255,255,0.1);cursor:not-allowed;pointer-events:none;transition:none}#backToTop{position:fixed;bottom:30px;right:30px;width:50px;height:50px;border-radius:50%;background:var(--bg-card);border:1px solid rgba(255,255,255,0.1);color:var(--accent-color);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:0.3s;z-index:1000;cursor:pointer}#backToTop:hover{background:var(--gradient-primary);color:#fff;border-color:transparent}#backToTop.show{opacity:1;visibility:visible}

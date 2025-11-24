@@ -1,187 +1,29 @@
-/* ----- 變數設定：賽博霓虹配色 (與首頁一致) ----- */
-:root {
-  --bg-dark: #0f172a; /* 深藍黑背景 (頁面背景) */
-  --bg-card-dark: #1e293b; /* 深色卡片背景 (Navbar, Footer, EULA標題) */
-  --text-main: #f8fafc; /* 主要文字白 (頁面/Navbar) */
-  --text-sub: #94a3b8; /* 次要文字灰 */
+/** @file dstyless.css
 
-  /* 漸層主色調：紫羅蘭 -> 亮青色 */
-  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
-  --accent-color: #06b6d4; /* 青色 (連結/強調) */
-  --highlight-color: #8b5cf6; /* 紫色 (法律條款標題/重點字) */
+                   _oo0oo_
+                  o8888888o
+                  88" . "88
+                  (| -_- |)
+                  0\  =  /0
+                ___/`---'\___
+              .' \\|     |// '.
+             / \\|||  :  |||// \
+            / _||||| -:- |||||- \
+           |   | \\\  -  /// |   |
+           | \_|  ''\---/''  |_/ |
+           \  .-\__  '-'  ___/-. /
+         ___'. .'  /--.--\  `. .'___
+      ."" '<  `.___\_<|>_/___.' >' "".
+     | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+     \  \ `_.   \_ __\ /__ _/   .-` /  /
+ =====`-.____`.___ \_____/___.-`___.-'=====
+                   `=---='
 
-  --text-card: #333; /* 卡片內文深色 */
-  --text-card-sub: #6c757d; /* 卡片內文次要灰 */
-}
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-/* ----- 全域設定 ----- */
-html {
-  height: 100%;
-}
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding-top: 70px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--bg-dark); /* 頁面背景維持暗色 */
-  color: var(--text-main);
-  scroll-behavior: smooth;
-}
+           佛祖保佑         永無 BUG
 
-/* 覆蓋 Bootstrap 預設顏色 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #fff;
-  font-weight: 700;
-}
-.text-muted {
-  color: var(--text-sub) !important;
-}
+ *  @author X!aN
+ *  @date 2025/11/24 */
 
-/* ----- Navbar 毛玻璃效果 (與首頁一致) ----- */
-.navbar-glass {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.navbar-brand {
-  font-weight: 800;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.5rem;
-}
-.nav-link {
-  color: #cbd5e1 !important;
-  transition: color 0.3s;
-}
-.nav-link:hover,
-.nav-link.active {
-  color: var(--accent-color) !important;
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
-}
-
-/* ----- Footer (與首頁一致) ----- */
-footer {
-  background: #020617;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-footer a {
-  color: var(--text-sub);
-  transition: 0.3s;
-}
-footer a:hover {
-  color: var(--accent-color);
-}
-
-/* ----- 免責聲明卡片樣式：白底！ ----- */
-.disclaimer-card {
-  background-color: #ffffff; /* 純白色背景 */
-  border: 1px solid rgba(139, 92, 246, 0.2); /* 淺紫色邊框 */
-  border-radius: 1rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* 柔和陰影 */
-  padding: 3rem;
-}
-.disclaimer-card .card-body {
-  color: var(--text-card); /* 內文轉為深色 */
-  line-height: 1.8;
-  font-size: 0.95rem;
-}
-
-/* 條款列表 */
-.disclaimer-card ol {
-  padding-left: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-}
-.disclaimer-card ol > li {
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  color: var(--highlight-color); /* 條款標題使用霓虹紫強調 */
-}
-.disclaimer-card ol ul {
-  margin-top: 0.75rem;
-  padding-left: 1.5rem;
-  list-style-type: none;
-  border-left: 2px dashed rgba(108, 117, 125, 0.3); /* 深色虛線分隔 */
-}
-.disclaimer-card ol ul li {
-  font-weight: 400;
-  color: var(--text-card-sub); /* 次要內文灰 */
-  margin-bottom: 0.5rem;
-  padding-left: 0.5rem;
-}
-.disclaimer-card ol ul li::before {
-  content: "▸";
-  color: var(--accent-color); /* 使用霓虹青色箭頭 */
-  font-weight: 700;
-  margin-right: 0.5rem;
-}
-
-/* 強調文字 (保留 HTML 內置的 <strong> 標籤) */
-.disclaimer-card strong {
-  color: var(--highlight-color);
-  font-weight: 900;
-  /* 移除文字陰影，降低視覺干擾 */
-  text-shadow: none;
-}
-
-/* 連結顏色 */
-.disclaimer-card a {
-  color: var(--accent-color);
-  transition: 0.3s;
-}
-.disclaimer-card a:hover {
-  color: var(--highlight-color);
-}
-
-/* 內嵌 PDF/EULA 樣式 */
-.eula-section {
-  border-top: 1px solid #ccc; /* 內文卡片內使用淺色分隔線 */
-  padding-top: 1.5rem;
-  margin-top: 2.5rem;
-}
-.eula-section h2 {
-  color: var(--text-card); /* 內文卡片內的標題應是深色 */
-}
-.ratio iframe {
-  border: 2px solid var(--accent-color) !important;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
-}
-
-/* Back to top (與首頁一致) */
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--bg-card-dark); /* 維持暗色背景 */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--accent-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  z-index: 1000;
-  cursor: pointer;
-}
-#backToTop:hover {
-  background: var(--gradient-primary);
-  color: #fff;
-  border-color: transparent;
-}
-#backToTop.show {
-  opacity: 1;
-  visibility: visible;
-}
+:root{--bg-dark:#0f172a;--bg-card-dark:#1e293b;--text-main:#f8fafc;--text-sub:#94a3b8;--gradient-primary:linear-gradient(135deg,#8b5cf6 0%,#06b6d4 100%);--accent-color:#06b6d4;--highlight-color:#8b5cf6;--text-card:#333;--text-card-sub:#6c757d}html{height:100%}body{min-height:100vh;display:flex;flex-direction:column;padding-top:70px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background-color:var(--bg-dark);color:var(--text-main);scroll-behavior:smooth}h1,h2,h3,h4,h5,h6{color:#fff;font-weight:700}.text-muted{color:var(--text-sub)!important}.navbar-glass{background:rgba(15,23,42,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.1)}.navbar-brand{font-weight:800;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:1.5rem}.nav-link{color:#cbd5e1!important;transition:color 0.3s}.nav-link:hover,.nav-link.active{color:var(--accent-color)!important;text-shadow:0 0 10px rgba(6,182,212,0.4)}footer{background:#020617;border-top:1px solid rgba(255,255,255,0.05)}footer a{color:var(--text-sub);transition:0.3s}footer a:hover{color:var(--accent-color)}.disclaimer-card{background-color:#ffffff;border:1px solid rgba(139,92,246,0.2);border-radius:1rem;box-shadow:0 5px 20px rgba(0,0,0,0.2);padding:3rem}.disclaimer-card.card-body{color:var(--text-card);line-height:1.8;font-size:0.95rem}.disclaimer-card ol{padding-left:1.5rem;margin-top:1.5rem;margin-bottom:2rem}.disclaimer-card ol>li{margin-bottom:1.5rem;font-weight:700;color:var(--highlight-color)}.disclaimer-card ol ul{margin-top:0.75rem;padding-left:1.5rem;list-style-type:none;border-left:2px dashed rgba(108,117,125,0.3)}.disclaimer-card ol ul li{font-weight:400;color:var(--text-card-sub);margin-bottom:0.5rem;padding-left:0.5rem}.disclaimer-card ol ul li::before{content:"▸";color:var(--accent-color);font-weight:700;margin-right:0.5rem}.disclaimer-card strong{color:var(--highlight-color);font-weight:900;text-shadow:none}.disclaimer-card a{color:var(--accent-color);transition:0.3s}.disclaimer-card a:hover{color:var(--highlight-color)}.eula-section{border-top:1px solid#ccc;padding-top:1.5rem;margin-top:2.5rem}.eula-section h2{color:var(--text-card)}.ratio iframe{border:2px solid var(--accent-color)!important;border-radius:0.5rem;box-shadow:0 0 10px rgba(6,182,212,0.3)}#backToTop{position:fixed;bottom:30px;right:30px;width:50px;height:50px;border-radius:50%;background:var(--bg-card-dark);border:1px solid rgba(255,255,255,0.1);color:var(--accent-color);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:0.3s;z-index:1000;cursor:pointer}#backToTop:hover{background:var(--gradient-primary);color:#fff;border-color:transparent}#backToTop.show{opacity:1;visibility:visible}
